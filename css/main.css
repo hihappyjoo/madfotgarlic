@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+#header {
+    background: #000;
+    padding: 0 10rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 192rem;
+}
+
+#header nav {
+    height: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff; /* ★★질문: 이거 왜 버튼엔 적용이 안되는거임??*/
+}
+
+.but-login {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.gnb {
+    display: flex;
+}
+
+.gnb a {
+    display: block;
+    padding: 1rem 4rem;
+
+    font-weight: 600;
+    font-size: 2rem;
+}
+/* //e-header */
+
+.promotion figure img {
+    width: 100%;
+}
+/* //e-main-promotion */
+
+.steak-set {
+    padding: 9rem 0;
+}
+
+.steak-detail li {
+    display: flex;
+}
+
+.steak-detail li + li {
+    flex-direction: row-reverse;
+}
+
+.detail-con {
+    width: 70.7rem;
+    height: 45rem;
+    padding: 5.5rem 6rem 5.5rem 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.steak-detail li + li > .detail-con {
+    padding: 5.5rem 30rem 5.5rem 6rem;
+}
+
+.con-text strong {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.con-text h3 {
+    margin-top: 1rem;
+}
+
+.con-text p {
+    font-size: 2rem;
+
+    margin-top: 3rem;
+}
+
+.steak-detail li figure {
+    width: 119.3rem;
+    height: 45rem;
+
+    overflow: hidden;
+}
+
+.steak-detail li figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.8s;
+}
+
+.steak-detail li:hover figure img {
+    transform: scale(1.15);
+}
+/* //e-main-steak set */
+
+.lunch-set {
+    padding: 90px 0 0;
+}
+
+.lunch-set .inner {
+    display: flex;
+    gap: 12.2rem;
+}
+
+.lunch-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 24.3rem;
+}
+
+.lunch-con strong {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.lunch-con h3 {
+    font-size: 6.4rem;
+
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--title-color);
+}
+
+.lunch-con p {
+    font-size: 2.4rem;
+
+    margin-top: 3rem;
+}
+.lunch-con p i {
+    font-weight: 600;
+}
+
+.lunch-set-slider-wrap {
+    display: flex;
+    gap: 40px;
+}
+
+.lunch-set-slider-wrap img {
+    aspect-ratio: 1/1.2848;
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+/* //e-main-lunch set */
+
+.store-cards {
+    padding: 25rem 0;
+    display: flex;
+}
+
+.store-cards li a {
+    display: flex;
+    flex-direction: column;
+
+    width: 48rem;
+    height: 30rem;
+    padding: 4rem;
+
+    background: var(--main-color);
+
+    position: relative;
+}
+
+.store-cards li + li a {
+    background: #d2b48c;
+}
+
+.store-cards li + li + li a {
+    background: #89765d;
+}
+
+.store-cards li a::after {
+    content: "";
+
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+
+    width: 11rem;
+    height: 11rem;
+
+    background: no-repeat 50%;
+    background-size: contain; /* 배경으로 들어간 이미지는 가상요소 자체 크기에 영향을 받으므로 cover하면 100% auto */
+}
+
+.store-cards li:nth-child(1) a::after {
+    background-image: url(../img/store_icon-01.svg);
+}
+.store-cards li:nth-child(2) a::after {
+    background-image: url(../img/store_icon-02.svg);
+}
+.store-cards li:nth-child(3) a::after {
+    background-image: url(../img/store_icon-03.svg);
+}
+
+.store-cards li a strong {
+    font-weight: 600;
+    font-size: 3.6rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.store-cards li a p {
+    font-weight: 300;
+    font-size: 2.4rem;
+    color: #fff;
+}
+/* //e-main-store */
+
+.membership .inner {
+    display: flex;
+    gap: 100px;
+    background: skyblue;
+}
+
+.membership-con {
+    width: 24.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.con-title strong {
+    display: block;
+
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 1;
+
+    margin-top: 2rem;
+}
+.con-title p:first-of-type {
+    font-weight: 400;
+    font-size: 1.8rem;
+    letter-spacing: -1.6%;
+
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid var(--title-color);
+}
+
+.con-title p + p {
+    font-size: 2.4rem;
+
+    margin-top: 3rem;
+}
+
+.con-title p + p i {
+    font-weight: 600;
+}
+
+.membership-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.membership-cards li {
+    width: 34rem;
+    height: 28rem;
+    border: 1px solid #000;
+}

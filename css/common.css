@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@font-face {
+    font-family: "PuradakGentleGothicR";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-size: 62.5%;
+    --main-color: #bd863d;
+    --sub-color: #c18d48;
+    --title-color: #1b1b1b;
+    --text-color: #252525;
+    --line-color: rgba(0, 0, 0, 0.3);
+    --bg-color: #e5e5e5;
+    --white10p: rgba(255, 255, 255, 0.1);
+    --white20p: rgba(255, 255, 255, 0.2);
+    --white30p: rgba(255, 255, 255, 0.3);
+    --white40p: rgba(255, 255, 255, 0.4);
+    --white50p: rgba(255, 255, 255, 0.5);
+    --white60p: rgba(255, 255, 255, 0.6);
+    --white70p: rgba(255, 255, 255, 0.7);
+    --white80p: rgba(255, 255, 255, 0.8);
+}
+
+::selection {
+    background: var(--main-color);
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ♥ ≒display: none ♥ - 안 보이고 들리기만 함. class명으로 정의. */
+hr,
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+}
+/* ♥ display: none ♥ */
+
+.view-more {
+    display: block;
+    width: 24.3rem;
+    height: 5rem;
+    background: var(--main-color);
+
+    font-weight: 700;
+    font-size: 2rem;
+    color: #fff;
+
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-more::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url(../img/arrow-right.svg) no-repeat 50%;
+    filter: invert(1);
+}
+
+h3 {
+    font-family: "PuradakGentleGothicR";
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--title-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body {
+    font: 1.6rem/1.6 "Pretendard", sans-serif;
+    word-break: keep-all;
+    color: var(--text-color);
+}
+
+.inner {
+    width: 1440px;
+    margin: 0 auto;
+}
