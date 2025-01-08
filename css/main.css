@@ -220,7 +220,6 @@
 .membership .inner {
     display: flex;
     gap: 100px;
-    background: skyblue;
 }
 
 .membership-con {
@@ -262,10 +261,112 @@
 .membership-cards {
     display: flex;
     flex-wrap: wrap;
+    gap: 4rem 3.75rem;
+
+    counter-reset: number;
 }
 
 .membership-cards li {
     width: 34rem;
     height: 28rem;
-    border: 1px solid #000;
+    padding: 6rem 4rem;
+    border: 1px solid var(--line-color);
+
+    display: flex;
+    gap: 2rem;
+
+    counter-increment: number;
 }
+
+.membership-cards li::before {
+    content: "0" counter(number);
+
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--main-color);
+
+    margin-top: 0.2rem;
+}
+
+.membership-cards li dl dt {
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: var(--title-color);
+}
+
+.membership-cards li dl dd {
+    font-size: 2rem;
+    /* color: #89765d; */
+
+    margin-top: 2rem;
+}
+
+.membership-left {
+    position: relative;
+}
+
+.membership-left a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 34rem;
+    height: 28rem;
+    background: var(--main-color);
+    padding: 4rem;
+
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.membership-left a i {
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 1;
+    color: #fff;
+
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.membership-left a i::after {
+    content: "";
+    width: 3.5rem;
+    height: 3.5rem;
+    background: url(../img/membership_icon.svg) no-repeat 50%;
+}
+/* //e-main-membership */
+
+.partnership-cards {
+    display: flex;
+
+    padding: 25rem 0;
+}
+
+.partnership-cards li a {
+    background: #e8d8c0;
+
+    display: flex;
+    align-items: end;
+    width: 72rem;
+    height: 22rem;
+    padding: 4rem 5rem;
+}
+
+.partnership-cards li + li a {
+    background: #d2b48c;
+}
+
+.partnership-cards li a dl dt {
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: var(--title-color);
+}
+
+.partnership-cards li a dl dd {
+    font-size: 2rem;
+}
+/* //e-main-partnership */
