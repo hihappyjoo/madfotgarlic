@@ -371,16 +371,25 @@
 }
 /* //e-main-partnership */
 
-.follow-us {
+.follow-title {
     text-align: center;
 }
 
-.follow-us h3 {
+.follow-title h3 {
+    display: inline-block;
     padding: 1rem 0;
-    margin: 0 57rem;
     border-bottom: 2px solid var(--title-color);
 }
-.follow-us p {
+.follow-title p {
     font-size: 2rem;
     margin-top: 1.6rem;
+}
+
+/* s: footer */
+
+#footer {
+    padding: 8rem 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
 }
