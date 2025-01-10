@@ -1,51 +1,13 @@
 @charset "utf-8";
 
-#header {
-    background: #000;
-    padding: 0 10rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-
-    width: 192rem;
+.promotion {
+    padding: 0 !important;
 }
-
-#header nav {
-    height: 9rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff; /* ★★질문: 이거 왜 버튼엔 적용이 안되는거임??*/
-}
-
-.but-login {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 300;
-}
-
-.gnb {
-    display: flex;
-}
-
-.gnb a {
-    display: block;
-    padding: 1rem 4rem;
-
-    font-weight: 600;
-    font-size: 2rem;
-}
-/* //e-header */
 
 .promotion figure img {
     width: 100%;
 }
 /* //e-main-promotion */
-
-.steak-set {
-    padding: 9rem 0;
-}
 
 .steak-detail li {
     display: flex;
@@ -103,16 +65,12 @@
 }
 /* //e-main-steak set */
 
-.lunch-set {
-    padding: 90px 0 0;
-}
-
-.lunch-set .inner {
+.lunch-con {
     display: flex;
     gap: 12.2rem;
 }
 
-.lunch-con {
+.lunch-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -120,12 +78,12 @@
     width: 24.3rem;
 }
 
-.lunch-con strong {
+.lunch-text strong {
     font-weight: 700;
     font-size: 2rem;
 }
 
-.lunch-con h3 {
+.lunch-text h3 {
     font-size: 6.4rem;
 
     margin-top: 1rem;
@@ -133,12 +91,12 @@
     border-bottom: 2px solid var(--title-color);
 }
 
-.lunch-con p {
+.lunch-text p {
     font-size: 2.4rem;
 
     margin-top: 3rem;
 }
-.lunch-con p i {
+.lunch-text p i {
     font-weight: 600;
 }
 
@@ -154,8 +112,46 @@
 /* //e-main-lunch set */
 
 .store-cards {
-    padding: 25rem 0;
     display: flex;
+}
+
+.store-cards li {
+    position: relative;
+}
+.store-cards li::before {
+    content: "";
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    z-index: 10;
+
+    width: 0rem;
+    height: 2px;
+    background: #fff;
+
+    transition: 0.4s;
+}
+.store-cards li::after {
+    content: "";
+    position: absolute;
+    bottom: 4rem;
+    left: 14rem;
+    z-index: 10;
+
+    width: 0rem;
+    height: 2px;
+    background: #fff;
+
+    transform: translate(-90%, -350%) rotate(45deg);
+}
+
+.store-cards li:hover::before {
+    width: 10rem;
+}
+
+.store-cards li:hover::after {
+    width: 2rem;
+    transition: 0.4s 0.2s;
 }
 
 .store-cards li a {
@@ -217,12 +213,12 @@
 }
 /* //e-main-store */
 
-.membership .inner {
+.membership-con {
     display: flex;
     gap: 100px;
 }
 
-.membership-con {
+.membership-text {
     width: 24.5rem;
 
     display: flex;
@@ -230,7 +226,7 @@
     justify-content: space-between;
 }
 
-.con-title strong {
+.membership-title strong {
     display: block;
 
     font-weight: 500;
@@ -239,7 +235,7 @@
 
     margin-top: 2rem;
 }
-.con-title p:first-of-type {
+.membership-title p:first-of-type {
     font-weight: 400;
     font-size: 1.8rem;
     letter-spacing: -1.6%;
@@ -248,13 +244,13 @@
     border-bottom: 2px solid var(--title-color);
 }
 
-.con-title p + p {
+.membership-title p + p {
     font-size: 2.4rem;
 
     margin-top: 3rem;
 }
 
-.con-title p + p i {
+.membership-title p + p i {
     font-weight: 600;
 }
 
@@ -296,7 +292,6 @@
 
 .membership-cards li dl dd {
     font-size: 2rem;
-    /* color: #89765d; */
 
     margin-top: 2rem;
 }
@@ -342,33 +337,33 @@
 
 .partnership-cards {
     display: flex;
-
-    padding: 25rem 0;
 }
 
 .partnership-cards li a {
-    background: #e8d8c0;
+    background: url(../img/partnership01.jpg);
 
     display: flex;
     align-items: end;
     width: 72rem;
     height: 22rem;
     padding: 4rem 5rem;
+
+    color: #fff;
 }
 
 .partnership-cards li + li a {
-    background: #d2b48c;
+    background: url(../img/partnership02.jpg) 50%;
 }
 
 .partnership-cards li a dl dt {
     font-weight: 700;
     font-size: 3.6rem;
-    color: var(--title-color);
 }
 
 .partnership-cards li a dl dd {
     font-size: 2rem;
 }
+
 /* //e-main-partnership */
 
 .follow-title {
@@ -385,11 +380,66 @@
     margin-top: 1.6rem;
 }
 
-/* s: footer */
+.follow-slider {
+    display: flex;
+    gap: 1.9rem;
+    justify-content: center;
 
-#footer {
-    padding: 8rem 0;
-    background: #000;
+    margin-top: 8rem;
+}
+
+.follow-slider li {
+    width: 30rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.follow-slider li:nth-child(4) {
+    width: 35rem;
+}
+
+.follow-slider li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.follow-slider li .insta-id {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: "PuradakGentleGothicR";
+    font-size: 2.4rem;
     color: #fff;
-    text-align: center;
+
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.follow-slider li .insta-id::before {
+    content: "";
+
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background: url(../img/insta-logo.png) no-repeat 50%;
+}
+
+.follow-slider li:hover .insta-id {
+    top: 50%;
+    opacity: 1;
 }
