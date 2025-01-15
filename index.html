@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>매드포갈릭</title>
 
-        <!-- swiper.js
+        <!-- swiper.js -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        swiper.js -->
+        <!-- swiper.js -->
 
         <!-- remixicon -->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <!-- remixicon -->
 
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
@@ -41,39 +42,34 @@
         <main id="main">
             <section class="promotion">
                 <h2 class="hidden">프로모션</h2>
-                <figure><img src="./img/promt-01.jpg" alt="k-cultured italian restaurant" /></figure>
-                <!-- <div class="swiper promotion-slider">
-                 
-                    <div class="swiper-wrapper">
-                    
-                        <div class="swiper-slide">
-                            <figure><img src="./img/promt-01.jpg" alt="k-cultured italian restaurant" /></figure>
+
+                <div class="promotion-slider-wrap">
+                    <div class="swiper promotion-slider">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./img/promt-01.jpg" alt="k-cultured italian restaurant" /></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./img/promt-02.jpg" alt="signature steak set" /></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./img/promt-03.jpg" alt="bone-in rib eye steak set" /></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./img/promt-04.jpg" alt="lunch set" /></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./img/promt-05.jpg" alt="signature steak set 제휴할인" /></a>
+                            </div>
                         </div>
-                        <div class="swiper-slide">
-                            <figure><img src="./img/promt-02.jpg" alt="시그니처 스테이크 세트" /></figure>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure><img src="./img/promt-03.jpg" alt="본-인 립아이 스테이크 세트" /></figure>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure><img src="./img/promt-04.jpg" alt="런치 세트" /></figure>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure><img src="./img/promt-05.jpg" alt="시그니처 스테이크 제휴 할인" /></figure>
-                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                        <button type="button" class="btn btn-prev"><img src="./img/icon_ar_l.png" alt="이전" /></button>
+                        <button type="button" class="btn btn-next"><img src="./img/icon_ar_r.png" alt="다음" /></button>
                     </div>
-
-                    <div class="swiper-pagination"></div>
-
-                    <button class="btn-prev btn">
-                        <i class="ri-arrow-left-wide-line"></i>
-                        <i class="hidden">이전</i>
-                    </button>
-                    <button class="btn-next btn">
-                        <i class="ri-arrow-right-wide-line"></i>
-                        <i class="hidden">다음</i>
-                    </button>
-                </div> -->
+                </div>
             </section>
             <section class="steak-set">
                 <h2 class="hidden">스테이크 세트</h2>
@@ -122,10 +118,130 @@
                             <a class="view-more" href="#">자세히 보기</a>
                         </div>
                         <div class="lunch-set-slider-wrap">
-                            <!-- swiper.js의 마크업 -->
-                            <img src="./img/lunch-main-01.jpg" alt="" />
-                            <img src="./img/lunch-main-02.jpg" alt="" />
-                            <img src="./img/lunch-main-03.jpg" alt="" />
+                            <div class="swiper lunch-set-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-01.jpg" alt="만다린 치킨 샐러드" />
+                                            <div class="lunch-name">
+                                                <strong>만다린 치킨 샐러드</strong>
+                                                <p>Mandarine Chicken Salad</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-02.jpg" alt="새우 텐더 샐러드" />
+                                            <div class="lunch-name">
+                                                <strong>새우 텐더 샐러드</strong>
+                                                <p>Shrimp Tender Salad</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-03.jpg" alt="갈릭페뇨 파스타" />
+                                            <div class="lunch-name">
+                                                <strong>갈릭페뇨 파스타</strong>
+                                                <p>Garlicpeno Pasta</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-04.jpg" alt="트리플 갈릭 파스타" />
+                                            <div class="lunch-name">
+                                                <strong>트리플 갈릭 파스타</strong>
+                                                <p>Triple Garlic Pasta</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-05.jpg" alt="마늘 까르보나라" />
+                                            <div class="lunch-name">
+                                                <strong>마늘 까르보나라</strong>
+                                                <p>Garlic Carbonara</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-06.jpg" alt="매드 페스카토레" />
+                                            <div class="lunch-name">
+                                                <strong>매드 페스카토레</strong>
+                                                <p>Mad Pescatore</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-07.jpg" alt="해산물 크림 리조또" />
+                                            <div class="lunch-name">
+                                                <strong>해산물 크림 리조또</strong>
+                                                <p>Seafood Cream Risotto</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-08.jpg" alt="마늘 시즐링 라이스" />
+                                            <div class="lunch-name">
+                                                <strong>마늘 시즐링 라이스</strong>
+                                                <p>Garlic Sizzling Rice</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-09.jpg" alt="소고기 & K-라이스" />
+                                            <div class="lunch-name">
+                                                <strong>소고기 & K-라이스</strong>
+                                                <p>Beef & K-Rice</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-10.jpg" alt="매드 글레이즈드 립" />
+                                            <div class="lunch-name">
+                                                <strong>매드 글레이즈드 립</strong>
+                                                <p>Mad Glazed Rib</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-11.jpg" alt="마늘 립아이 스테이크" />
+                                            <div class="lunch-name">
+                                                <strong>마늘 립아이 스테이크</strong>
+                                                <p>Garlic Ribeye Steak</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-12.jpg" alt="매드 크림 필렛 스테이크" />
+                                            <div class="lunch-name">
+                                                <strong>매드 크림 필렛 스테이크</strong>
+                                                <p>Mad Cream Filet Steak</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./img/lunch-main-13.jpg" alt="포레스트 스트립 스테이크" />
+                                            <div class="lunch-name">
+                                                <strong>포레스트 스트립 스테이크</strong>
+                                                <p>Forest Strip Steak</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-next">
+                                <img src="./img/icon_ar_l_blk.png" alt="다음" />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -237,67 +353,73 @@
                     <h3>FOLLOW US</h3>
                     <p>Instagram</p>
                 </div>
-                <ul class="follow-slider">
-                    <li>
-                        <a href="#">
-                            <img src="./img/insta-02.jpg" alt="인스타그램 크리스마스1" />
-                            <div class="insta-id">
-                                <p>@madforgalic_kr</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./img/insta-03.jpg" alt="인스타그램 크리스마스2" />
-                            <div class="insta-id">
-                                <p>@madforgalic_kr</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./img/insta-04.jpg" alt="인스타그램 매드뉴이어" />
-                            <div class="insta-id">
-                                <p>@madforgalic_kr</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./img/insta-01.jpg" alt="인스타그램 최애메뉴는" />
-                            <div class="insta-id">
-                                <p>@madforgalic_kr</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./img/insta-05.jpg" alt="인스타그램 매드라자냐1" />
-                            <div class="insta-id">
-                                <p>@madforgalic_kr</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./img/insta-06.jpg" alt="인스타그램 매드라자냐2" />
-                            <div class="insta-id">
-                                <p>@madforgalic_kr</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./img/insta-07.jpg" alt="인스타그램 kt멤버십" />
-                            <div class="insta-id">
-                                <p>@madforgalic_kr</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
 
-                <!-- 슬라이더
-                <div class="follow-us-slider-wrap"></div> -->
+                <div class="follou-slider-wrap">
+                    <div class="swiper follow-slider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/insta-02.jpg" alt="인스타그램 크리스마스1" />
+                                    <div class="insta-id">
+                                        <p>@madforgalic_kr</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/insta-03.jpg" alt="인스타그램 크리스마스2" />
+                                    <div class="insta-id">
+                                        <p>@madforgalic_kr</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/insta-04.jpg" alt="인스타그램 매드뉴이어" />
+                                    <div class="insta-id">
+                                        <p>@madforgalic_kr</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/insta-01.jpg" alt="인스타그램 최애메뉴는" />
+                                    <div class="insta-id">
+                                        <p>@madforgalic_kr</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/insta-05.jpg" alt="인스타그램 매드라자냐1" />
+                                    <div class="insta-id">
+                                        <p>@madforgalic_kr</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/insta-06.jpg" alt="인스타그램 매드라자냐2" />
+                                    <div class="insta-id">
+                                        <p>@madforgalic_kr</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./img/insta-07.jpg" alt="인스타그램 kt멤버십" />
+                                    <div class="insta-id">
+                                        <p>@madforgalic_kr</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </section>
         </main>
         <hr />
@@ -321,26 +443,6 @@
             </address>
         </footer>
 
-        <!-- <script>
-            const promotionSlider = new Swiper(".promotion-slider", {
-                // Optional parameters
-                direction: "vertical",
-                loop: true,
-                autoplay: true,
-                speed: 1000,
-
-                // If we need pagination
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-
-                // Navigation arrows
-                navigation: {
-                    nextEl: ".btn-next",
-                    prevEl: ".btn-prev",
-                },
-            });
-        </script> -->
+        <script src="./js/script.js"></script>
     </body>
 </html>

@@ -4,8 +4,66 @@
     padding: 0 !important;
 }
 
-.promotion figure img {
+.promotion-slider {
+    position: relative;
+}
+
+.promotion-slider img {
     width: 100%;
+}
+
+.promotion-slider .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 20rem;
+    height: 100%;
+    /* background: orangered; */
+}
+
+.promotion-slider .btn img {
+    width: 3rem;
+    height: 5.8rem;
+}
+
+.promotion-slider .btn-prev {
+    left: 0rem;
+}
+.promotion-slider .btn-next {
+    right: 0rem;
+}
+
+.promotion-slider .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 3.2rem;
+}
+
+.promotion-slider .swiper-pagination-bullet {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.promotion-slider .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.5;
+}
+
+.promotion-slider .swiper-pagination-bullet-active {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0;
+    background: url(../img/garlic-icon.svg) no-repeat 50%;
+    opacity: 1;
 }
 /* //e-main-promotion */
 
@@ -100,15 +158,76 @@
     font-weight: 600;
 }
 
+/* 여기부터 슬라이드 */
+/* ★★질문: 
+1. .swiper에 oh가 있어서 범위를 벗어난 화살표가 안 보임
+    -> 같은 애의 다른 이름으로 넣은 lunch-set-slider 로 잡아서 overflow: visible을 넣었더니 이번엔 슬라이드들이 다 튀어나옴 ㅜ.ㅜ
+    => 이거 그냥 슬라이드를 한번 더 다른 div로 감싸줘서 해결하면 되나요?
+
+2. silde들이 한번에 3개씩 보이라고 slideperview: 3, 을 함
+    -> 근데 내가 원하는건 2개 반쯤 보이는거라 .lunch-set-slider에 3개가 들어가는 크기의 width를 넣고 .lunch-set-slider-wrap에 보여야하는 크기를 넣음
+    => 이건 또 overflow: hidden 하니까 inner영역에 가둬짐 ㅜ.ㅜ  오또케애하나요
+
+3. 글구 slideperview 하니까 ㄱ=
+사이 간격........................
+    */
+
 .lunch-set-slider-wrap {
-    display: flex;
-    gap: 40px;
+    width: 107.5rem;
+    height: 60rem;
+    position: relative;
+    /* border: 1px solid #000; */
 }
 
-.lunch-set-slider-wrap img {
-    aspect-ratio: 1/1.2848;
+.lunch-set-slider-wrap .lunch-set-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 1500px;
+}
+
+.lunch-set-slider-wrap .swiper-wrapper img {
     box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
 }
+
+.lunch-set-slider-wrap .btn {
+    position: absolute;
+    top: 50%;
+    left: -5.4rem;
+    transform: translateY(-50%);
+    z-index: 100;
+
+    width: 5rem;
+    height: 50%;
+    background: orangered;
+}
+
+.lunch-set-slider-wrap .btn img {
+    width: 2.5rem;
+    height: 4.8rem;
+}
+
+.lunch-set-slider .swiper-slide {
+    position: relative;
+}
+
+.lunch-name strong {
+    position: absolute;
+    bottom: 4rem;
+    right: 7rem;
+
+    font-size: 2.4rem;
+}
+
+.lunch-name p {
+    position: absolute;
+    bottom: 2rem;
+    right: 7rem;
+
+    font-size: 1.6rem;
+}
+
 /* //e-main-lunch set */
 
 .store-cards {
@@ -380,33 +499,29 @@
     margin-top: 1.6rem;
 }
 
-.follow-slider {
-    display: flex;
-    gap: 1.9rem;
-    justify-content: center;
-
+.follou-slider-wrap {
     margin-top: 8rem;
 }
 
-.follow-slider li {
+.follou-slider-wrap a {
+    display: block;
     width: 30rem;
-    aspect-ratio: 1/1;
     overflow: hidden;
 
     position: relative;
 }
 
-.follow-slider li:nth-child(4) {
+.follow-slider .swiper-slide:nth-child(4) a {
     width: 35rem;
 }
 
-.follow-slider li img {
+.follou-slider-wrap a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.follow-slider li .insta-id {
+.follow-slider .swiper-slide a .insta-id {
     position: absolute;
     top: 150%;
     left: 50%;
@@ -430,7 +545,7 @@
     transition: 0.4s;
 }
 
-.follow-slider li .insta-id::before {
+.follow-slider .swiper-slide a .insta-id::before {
     content: "";
 
     display: block;
@@ -439,7 +554,14 @@
     background: url(../img/insta-logo.png) no-repeat 50%;
 }
 
-.follow-slider li:hover .insta-id {
+.follow-slider .swiper-slide a:hover .insta-id {
     top: 50%;
     opacity: 1;
+}
+
+.follow-slider .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
 }
