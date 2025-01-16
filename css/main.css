@@ -174,7 +174,7 @@
 
 .lunch-set-slider-wrap {
     width: 107.5rem;
-    height: 60rem;
+    height: 60.4rem;
     position: relative;
     /* border: 1px solid #000; */
 }
@@ -184,7 +184,7 @@
     top: 0;
     left: 0;
 
-    width: 1500px;
+    width: 2000px;
 }
 
 .lunch-set-slider-wrap .swiper-wrapper img {
@@ -200,7 +200,7 @@
 
     width: 5rem;
     height: 50%;
-    background: orangered;
+    /* background: orangered; */
 }
 
 .lunch-set-slider-wrap .btn img {
@@ -210,6 +210,15 @@
 
 .lunch-set-slider .swiper-slide {
     position: relative;
+    width: 46.7rem;
+    padding-bottom: 4px;
+    opacity: 0.3;
+}
+
+.lunch-set-slider .swiper-slide-active,
+.lunch-set-slider .swiper-slide-next {
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .lunch-name strong {

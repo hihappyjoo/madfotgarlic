@@ -98,6 +98,7 @@ body {
     font: 1.6rem/1.6 "Pretendard", sans-serif;
     word-break: keep-all;
     color: var(--text-color);
+    overflow-x: hidden; /* 넘어가는게 있어도 가로스크롤이 안생기는 명령어 */
 }
 
 .inner {
@@ -113,7 +114,7 @@ body {
     left: 0;
     z-index: 999;
 
-    width: 192rem;
+    width: 100%;
 }
 
 #header nav {

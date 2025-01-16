@@ -19,7 +19,8 @@ const promotionSlider = new Swiper(".promotion-slider", {
 const lunchSetSlider = new Swiper(".lunch-set-slider", {
     // Optional parameters
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: "auto" /* wrapper 가로길이 / 내가 설정한 slide길이 갯수만큼 보임 */,
+    spaceBetween: 40,
 
     // Navigation arrows
     navigation: {
