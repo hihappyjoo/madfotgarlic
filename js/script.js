@@ -30,8 +30,11 @@ const lunchSetSlider = new Swiper(".lunch-set-slider", {
 
 const followSlider = new Swiper(".follow-slider", {
     // Optional parameters
+    loop: true,
+    slidesPerView: "auto",
 
-    slidesPerView: 5,
+    centeredSlides: true,
+    // spaceBetween: 19
 
     // If we need pagination
     pagination: {
