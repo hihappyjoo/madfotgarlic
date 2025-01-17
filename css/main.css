@@ -107,8 +107,35 @@
 .steak-detail li figure {
     width: 119.3rem;
     height: 45rem;
-
     overflow: hidden;
+
+    position: relative;
+}
+
+.steak-detail li figure::before {
+    content: "";
+    z-index: 100;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.steak-detail li + li figure::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: initial;
+    right: 0;
+
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 .steak-detail li figure img {
@@ -175,6 +202,7 @@
 .lunch-set-slider-wrap {
     width: 107.5rem;
     height: 60.4rem;
+
     position: relative;
     /* border: 1px solid #000; */
 }
@@ -208,17 +236,23 @@
     height: 4.8rem;
 }
 
-.lunch-set-slider .swiper-slide {
+.lunch-set-slider-wrap .swiper-slide {
     position: relative;
     width: 46.7rem;
     padding-bottom: 4px;
     opacity: 0.3;
-    /* transition: 0.5s; */
+    transition: 0.8s;
 }
 
-.lunch-set-slider .swiper-slide-active,
-.lunch-set-slider .swiper-slide-next {
+.lunch-set-slider-wrap .lunch-set-slider .swiper-slide-active,
+.lunch-set-slider-wrap .lunch-set-slider .swiper-slide-next {
     opacity: 1;
+    /* transform: scale(1); */
+}
+
+.lunch-set-slider .swiper-slide {
+    /* transform: scale(0.8); */
+    transform-origin: 50% 100%;
 }
 
 .lunch-name strong {
@@ -512,19 +546,39 @@
 /* 투명도 지금은 op로 개체마다 바꿨는데 그라데이션으로 하고 싶어요 이거는 posa해서 포토샵 마스크처럼 흰색그라데이션 넣으면될까요??? */
 .follow-slider-wrap {
     margin-top: 8rem;
+    position: relative;
 }
 
-.follow-slider-wrap .swiper-wrapper {
-    min-height: 35rem;
-    align-items: end;
+.follow-slider-wrap::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.follow-slider-wrap::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 .follow-slider .swiper-slide {
-    width: 30rem;
-    height: 30rem;
-    margin: 0 9.5px;
+    transform: scale(0.9);
+    transform-origin: 50% 100%;
     overflow: hidden;
-    opacity: 0.3;
 
     transition: 0.4s;
 
@@ -532,14 +586,7 @@
 }
 
 .follow-slider .swiper-slide-active {
-    width: 35rem;
-    height: 35rem;
-    opacity: 1;
-}
-
-.follow-slider .swiper-slide-prev,
-.follow-slider .swiper-slide-next {
-    opacity: 0.9;
+    transform: scale(1);
 }
 
 .follow-slider-wrap a img {
@@ -588,24 +635,36 @@
     opacity: 1;
 }
 
-.follow-slider .swiper-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-}
-
 .follow-slider-wrap .swiper-horizontal > .swiper-pagination-bullets,
 .follow-slider-wrap .swiper-pagination-bullets.swiper-pagination-horizontal,
 .follow-slider-wrap .swiper-pagination-custom,
 .follow-slider-wrap .swiper-pagination-fraction {
-    bottom: -3rem;
+    bottom: -5rem;
+    display: block;
 }
 
 .follow-slider-wrap .swiper {
     overflow: visible;
 }
 
+.follow-slider-wrap .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+}
 .follow-slider-wrap .swiper-pagination-bullet-active {
     background: var(--black60p);
+}
+.follow-slider-wrap .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev,
+.follow-slider-wrap .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+    transform: scale(1);
+}
+
+.follow-slider-wrap .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
+.follow-slider-wrap .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+    transform: scale(0.66);
+}
+
+.follow-slider-wrap .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.follow-slider-wrap .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 1.5rem;
 }
