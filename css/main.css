@@ -113,7 +113,7 @@
 }
 
 .steak-detail li figure::before {
-    content: "";
+    content: '';
     z-index: 100;
 
     position: absolute;
@@ -126,7 +126,7 @@
 }
 
 .steak-detail li + li figure::before {
-    content: "";
+    content: '';
 
     position: absolute;
     top: 0;
@@ -208,15 +208,12 @@
 }
 
 .lunch-set-slider-wrap .lunch-set-slider {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    left: 0;
+    left: 0; */
 
-    width: 2000px;
-}
-
-.lunch-set-slider-wrap .swiper-wrapper img {
-    box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+    width: 1988px; /* (467+40 * 4)-40 */
+    padding-bottom: 4px;
 }
 
 .lunch-set-slider-wrap .btn {
@@ -239,35 +236,42 @@
 .lunch-set-slider-wrap .swiper-slide {
     position: relative;
     width: 46.7rem;
-    padding-bottom: 4px;
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
     opacity: 0.3;
     transition: 0.8s;
+    /* border: 1px solid #000; */
+}
+
+.lunch-set-slider-wrap .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .lunch-set-slider-wrap .lunch-set-slider .swiper-slide-active,
 .lunch-set-slider-wrap .lunch-set-slider .swiper-slide-next {
     opacity: 1;
-    /* transform: scale(1); */
+    transform: scale(1);
 }
 
 .lunch-set-slider .swiper-slide {
-    /* transform: scale(0.8); */
+    transform: scale(0.8);
     transform-origin: 50% 100%;
 }
 
-.lunch-name strong {
+.lunch-name {
     position: absolute;
-    bottom: 4rem;
-    right: 7rem;
+    bottom: 3rem;
+    right: 4rem;
+    width: 25rem;
+    text-align: right;
+}
 
+.lunch-name strong {
     font-size: 2.4rem;
 }
 
 .lunch-name p {
-    position: absolute;
-    bottom: 2rem;
-    right: 7rem;
-
     font-size: 1.6rem;
 }
 
@@ -281,7 +285,7 @@
     position: relative;
 }
 .store-cards li::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 4rem;
     left: 4rem;
@@ -294,7 +298,7 @@
     transition: 0.4s;
 }
 .store-cards li::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 4rem;
     left: 14rem;
@@ -338,7 +342,7 @@
 }
 
 .store-cards li a::after {
-    content: "";
+    content: '';
 
     position: absolute;
     bottom: 4rem;
@@ -437,7 +441,7 @@
 }
 
 .membership-cards li::before {
-    content: "0" counter(number);
+    content: '0' counter(number);
 
     font-weight: 900;
     font-size: 2rem;
@@ -490,7 +494,7 @@
 }
 
 .membership-left a i::after {
-    content: "";
+    content: '';
     width: 3.5rem;
     height: 3.5rem;
     background: url(../img/membership_icon.svg) no-repeat 50%;
@@ -550,7 +554,7 @@
 }
 
 .follow-slider-wrap::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 0;
@@ -563,7 +567,7 @@
 }
 
 .follow-slider-wrap::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     right: 0;
@@ -601,7 +605,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    font-family: "PuradakGentleGothicR";
+    font-family: 'PuradakGentleGothicR';
     font-size: 2.4rem;
     color: #fff;
 
@@ -620,7 +624,7 @@
 }
 
 .follow-slider .swiper-slide a .insta-id::before {
-    content: "";
+    content: '';
 
     display: block;
     width: 3rem;
