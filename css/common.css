@@ -135,10 +135,14 @@ body {
     color: #fff; /* ★★질문: 이거 왜 버튼엔 적용이 안되는거임??*/
 }
 
-.but-login {
+#header .btn {
     color: #fff;
     font-size: 2rem;
     font-weight: 300;
+}
+
+.btn-menu {
+    display: none;
 }
 
 .gnb {
