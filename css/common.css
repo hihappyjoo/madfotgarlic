@@ -109,6 +109,7 @@ body {
     word-break: keep-all;
     color: var(--text-color);
     overflow-x: hidden; /* 넘어가는게 있어도 가로스크롤이 안생기는 명령어 */
+    position: relative;
 }
 
 .inner {

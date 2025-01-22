@@ -23,7 +23,6 @@
     z-index: 10;
 
     width: 20rem;
-    width: 10.4166%;
     height: 100%;
     /* background: orangered; */
 }
@@ -86,17 +85,21 @@
 
 .detail-con {
     width: 70.7rem;
+    width: 36.8229%;
     height: 45rem;
     padding: 5.5rem 6rem 5.5rem 30rem;
     padding: 5.5rem 6rem 5.5rem 15.625%;
+    padding: 5.5rem 6rem 5.5rem calc(36.8229% - 35rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: palegreen;
 }
 
 .steak-detail li + li > .detail-con {
     padding: 5.5rem 30rem 5.5rem 6rem;
     padding: 5.5rem 15.625% 5.5rem 6rem;
+    padding: 5.5rem calc(36.8229% - 35rem) 5.5rem 6rem;
 }
 
 .con-text strong {
@@ -221,7 +224,6 @@
     height: 60.4rem;
 
     position: relative;
-    /* border: 1px solid #000; */
 }
 
 .lunch-set-slider-wrap .lunch-set-slider {
@@ -599,6 +601,9 @@
 .follow-slider-wrap {
     margin-top: 8rem;
     position: relative;
+
+    padding-bottom: 5rem;
+    /* background: paleturquoise; */
 }
 
 .follow-slider-wrap::before {
@@ -691,12 +696,15 @@
 .follow-slider-wrap .swiper-pagination-bullets.swiper-pagination-horizontal,
 .follow-slider-wrap .swiper-pagination-custom,
 .follow-slider-wrap .swiper-pagination-fraction {
-    bottom: -5rem;
-    display: block;
-}
-
-.follow-slider-wrap .swiper {
-    overflow: visible;
+    /* bottom: -5rem; */
+    top: initial;
+    bottom: 0;
+    /* .follow-slider-wrap:
+    overflow:visible 삭제, padding bottom추가.
+    pagenation을 .follow-slider-wrap의 자식으로 올려서 posa하니까 swiper.js가 안 먹는거가틈.. ㅜㅜ
+    어머나 세상에 씨발!
+    body에 postion:relative가 있으니까 bulletDynamic이랑 slider 튀어나가는 overflow-x:hidden 문제가 모두 해결됨 
+    */
 }
 
 .follow-slider-wrap .swiper-pagination-bullet {
@@ -729,14 +737,13 @@
     }
 }
 
-@media screen and (max-width: 820px) {
+/* ⊹₊     ˚‧︵‿₊୨୧₊‿︵‧ ˚     ₊⊹ */
+/*          ♥ 추가분기 ♥         */
+/* ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ─── */
+@media screen and (max-width: 1100px) {
     .inner {
         width: 74rem;
         width: 90.2439%;
-    }
-
-    h3 {
-        font-size: 4rem;
     }
 
     #header {
@@ -761,8 +768,109 @@
         background: url(../img/icon-more.svg) no-repeat 50% / cover;
     }
 
-    .promotion-slider {
-        height: 100vh;
+    .con-text strong {
+        font-size: 1.8rem;
+    }
+
+    .con-text h3 {
+        font-size: 4rem;
+        margin-top: 0.75rem;
+    }
+
+    .con-text p {
+        font-size: 1.8rem;
+    }
+
+    .con-text p br {
+        display: none;
+    }
+
+    .membership-con {
+        flex-direction: column;
+    }
+
+    .membership-text {
+        width: 100%;
+
+        position: relative;
+    }
+
+    .membership-text .view-more {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .membership-title h3 {
+        font-size: 5.6rem;
+
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    .membership-title strong {
+        font-weight: 700;
+        font-size: 3.6rem;
+    }
+
+    .membership-title p:first-of-type {
+        font-weight: 500;
+        font-size: 2.1rem;
+
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .membership-title p + p {
+        font-size: 1.8rem;
+
+        margin-top: 2rem;
+    }
+
+    .membership-cards {
+        gap: 2rem 2.4546rem;
+        gap: 2rem 3.317%;
+
+        margin-top: 5rem;
+    }
+
+    .membership-cards li {
+        /* width: 23.3rem;
+        height: 19.8rem; */
+        /* pc에서 %잡은걸아 같음 */
+        padding: 4rem 2rem;
+    }
+
+    .membership-cards li::before {
+        font-size: 1.6rem;
+    }
+
+    .membership-cards li dl dt {
+        font-weight: 500;
+        font-size: 2rem;
+    }
+
+    .membership-cards li dl dd {
+        font-size: 1.4rem;
+
+        margin-top: 1.5rem;
+    }
+
+    .membership-left a {
+        padding: 3rem 2rem;
+    }
+
+    .membership-left a i {
+        font-weight: 700;
+        font-size: 2.4rem;
+    }
+}
+
+/* 태블릿 분기 */
+
+@media screen and (max-width: 820px) {
+    h3 {
+        font-size: 4rem;
     }
 
     .promotion-slider .btn {
@@ -777,10 +885,6 @@
 
     .steak-detail li + li > .detail-con {
         padding: 7.5rem 3rem 7.5rem 1rem;
-    }
-
-    .con-text strong {
-        font-size: 1.8rem;
     }
 
     .con-text h3 {
@@ -896,86 +1000,6 @@
         width: 1.5rem;
     }
 
-    .membership-con {
-        flex-direction: column;
-    }
-
-    .membership-text {
-        width: 100%;
-
-        position: relative;
-    }
-
-    .membership-text .view-more {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    .membership-title h3 {
-        font-size: 5.6rem;
-
-        padding-bottom: 1rem;
-        border-bottom: 2px solid var(--title-color);
-    }
-
-    .membership-title strong {
-        font-weight: 700;
-        font-size: 3.6rem;
-    }
-
-    .membership-title p:first-of-type {
-        font-weight: 500;
-        font-size: 2.1rem;
-
-        padding-bottom: 0;
-        border-bottom: none;
-    }
-
-    .membership-title p + p {
-        font-size: 1.8rem;
-
-        margin-top: 2rem;
-    }
-
-    .membership-cards {
-        gap: 2rem 2.4546rem;
-        gap: 2rem 3.317%;
-
-        margin-top: 5rem;
-    }
-
-    .membership-cards li {
-        /* width: 23.3rem;
-        height: 19.8rem; */
-        /* pc에서 %잡은걸아 같음 */
-        padding: 4rem 2rem;
-    }
-
-    .membership-cards li::before {
-        font-size: 1.6rem;
-    }
-
-    .membership-cards li dl dt {
-        font-weight: 500;
-        font-size: 2rem;
-    }
-
-    .membership-cards li dl dd {
-        font-size: 1.4rem;
-
-        margin-top: 1.5rem;
-    }
-
-    .membership-left a {
-        padding: 3rem 2rem;
-    }
-
-    .membership-left a i {
-        font-weight: 700;
-        font-size: 2.4rem;
-    }
-
     .partnership .inner {
         width: 100%;
     }
@@ -997,6 +1021,8 @@
         font-size: 4rem;
     }
 }
+
+/* 모바일 분기 */
 
 @media screen and (max-width: 430px) {
     .inner {
