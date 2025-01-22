@@ -38,6 +38,7 @@
 .promotion-slider .btn-prev {
     left: 0rem;
 }
+
 .promotion-slider .btn-next {
     right: 0rem;
 }
@@ -48,6 +49,7 @@
     align-items: center;
     gap: 2.5rem;
 }
+
 .promotion-slider .swiper-horizontal > .swiper-pagination-bullets,
 .promotion-slider .swiper-pagination-bullets.swiper-pagination-horizontal,
 .promotion-slider .swiper-pagination-custom,
@@ -69,7 +71,7 @@
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 0;
-    background: url(../img/garlic-icon.svg) no-repeat 50%;
+    background: url(../img/garlic-icon.svg) no-repeat 50% / contain;
     opacity: 1;
 }
 /* //e-main-promotion */
@@ -741,6 +743,10 @@
         padding: 0 4rem;
     }
 
+    #header nav {
+        height: 6rem;
+    }
+
     .gnb,
     .btn-login {
         display: none;
@@ -751,7 +757,7 @@
         justify-content: center;
         align-items: center;
         width: 3rem;
-        height: 3rem;
+        height: 2.5rem;
         background: url(../img/icon-more.svg) no-repeat 50% / cover;
     }
 
@@ -989,5 +995,268 @@
 
     .follow-title h3 {
         font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .inner {
+        width: 39rem;
+        width: 90.6977%;
+    }
+
+    #header nav {
+        height: 5rem;
+    }
+
+    #header nav h1 a {
+        display: block;
+        width: 13.2rem;
+        height: 2rem;
+    }
+
+    #header nav h1 a img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn-menu {
+        width: 2rem;
+        height: 1.5rem;
+    }
+
+    .promotion-slider .swiper-pagination-bullet {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .promotion-slider .swiper-pagination-bullet-active {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .promotion-slider .swiper-pagination {
+        gap: 1.5rem;
+    }
+
+    .steak-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 11rem;
+    }
+
+    .steak-detail li,
+    .steak-detail li + li {
+        flex-direction: column;
+    }
+
+    .detail-con,
+    .steak-detail li + li > .detail-con {
+        width: 39rem;
+        width: 90.6977%;
+        height: 30rem;
+        padding: 0 3rem;
+
+        justify-content: space-between;
+    }
+
+    .steak-detail li figure {
+        width: 100%;
+        /* height: 40rem; */
+        aspect-ratio: 1/93.0233;
+
+        margin-top: 3.5rem;
+    }
+
+    .steak-detail li figure::before {
+        display: none;
+    }
+
+    .lunch-con {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .lunch-text {
+        width: 100%;
+    }
+
+    .lunch-text h3 {
+        font-size: 5.4rem;
+    }
+
+    .lunch-text p {
+        margin-top: 2rem;
+    }
+
+    .lunch-text .view-more {
+        margin-top: 3rem;
+    }
+
+    .lunch-set-slider-wrap {
+        width: 41rem;
+        width: 95.3488%;
+        height: 48.5rem;
+        /* border: 1px solid #000; */
+    }
+
+    .lunch-set-slider-wrap .lunch-set-slider {
+        width: 100%;
+        height: 485px;
+        /* (345*2)+20 */
+    }
+
+    .lunch-set-slider-wrap .swiper-slide {
+        width: 345px;
+        width: 84.1463%;
+    }
+
+    .store-cards {
+        flex-direction: column;
+    }
+
+    .store-cards li {
+        width: 100%;
+        height: 17.5rem;
+    }
+
+    .store-cards li a {
+        padding: 3rem 5rem;
+    }
+
+    .store-cards li a strong {
+        font-size: 3.2rem;
+    }
+
+    .store-cards li a p {
+        font-size: 2rem;
+    }
+
+    .store-cards li a::after {
+        width: 5rem;
+        aspect-ratio: 1;
+        bottom: 3.5rem;
+        right: 5.5rem;
+    }
+
+    .store-cards li::before {
+        bottom: 3.5rem;
+        left: 5rem;
+    }
+    .store-cards li::after {
+        bottom: 3.7rem;
+        left: 13rem;
+    }
+
+    .store-cards li:hover::before {
+        width: 8rem;
+    }
+
+    .store-cards li:hover::after {
+        width: 2rem;
+        transition: 0.4s 0.2s;
+    }
+
+    .membership-title h3 {
+        font-size: 5.4rem;
+    }
+
+    .membership-title p + p {
+        font-size: 2rem;
+    }
+
+    .membership-title p + p > br {
+        display: none;
+    }
+    /* ???이부분.. 애초에 br을 뺘고 padding값이나 그런걸로 줄조절해줘야? 함? */
+
+    .membership-cards {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .membership-cards li {
+        width: 100%;
+        min-height: 14.7rem;
+        aspect-ratio: initial;
+        padding: 3rem 5rem;
+    }
+
+    .membership-cards li dl dd {
+        font-size: 1.6rem;
+    }
+
+    .membership-text {
+        position: static;
+    }
+
+    .membership-con {
+        position: relative;
+    }
+
+    .membership-text .view-more {
+        top: initial;
+        bottom: -3rem;
+        left: 0;
+        transform: translateY(100%);
+
+        width: calc((100% - 2rem) / 2);
+        height: 8rem;
+        background-color: #d2b48c;
+    }
+
+    .membership-left a {
+        bottom: -3rem;
+        transform: translateY(100%);
+
+        width: calc((100% - 2rem) / 2);
+        height: 8rem;
+        padding: 0 10px;
+
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .membership-left a i {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .partnership-cards {
+        flex-direction: column;
+    }
+
+    .partnership-cards li {
+        width: 100%;
+    }
+
+    .partnership-cards li:first-child {
+        filter: flip;
+    }
+
+    .partnership-cards li a {
+        height: 15rem;
+    }
+
+    .follow-slider .swiper-slide a .insta-id {
+        font-size: 2rem;
+    }
+
+    .foot-app a {
+        padding: 1.5rem;
+        border-radius: 5rem;
+        background: #fff;
+    }
+
+    .foot-app a i {
+        display: none;
+    }
+
+    .foot-app a::before {
+        content: "";
+
+        display: block;
+        width: 3.2rem;
+        height: 3.2rem;
     }
 }

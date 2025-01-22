@@ -196,7 +196,9 @@ body {
     padding: 0.5rem 3rem;
     border-radius: 5rem;
     background: #fff;
+}
 
+.foot-app a i {
     font-weight: 700;
     font-size: 1.8rem;
     color: #000;
