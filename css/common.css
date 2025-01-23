@@ -79,6 +79,10 @@ hr,
     align-items: center;
 }
 
+.lunch-con .view-more {
+    width: 100%;
+}
+
 .view-more::after {
     content: "";
     display: block;

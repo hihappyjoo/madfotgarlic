@@ -123,6 +123,7 @@
     width: 62.1354%;
     height: 45rem;
     overflow: hidden;
+    flex-grow: 1;
 
     position: relative;
 }
@@ -176,8 +177,8 @@
     flex-direction: column;
     justify-content: space-between;
 
-    width: 24.3rem;
-    width: 16.875%;
+    width: 21rem;
+    flex-shrink: 0;
 }
 
 .lunch-text strong {
@@ -220,41 +221,19 @@
     */
 
 .lunch-set-slider-wrap {
-    width: 107.5rem;
+    width: calc(100% - 33.2rem);
     height: 60.4rem;
 
     position: relative;
 }
 
 .lunch-set-slider-wrap .lunch-set-slider {
-    /* position: absolute;
-    top: 0;
-    left: 0; */
-
     width: 1988px; /* (467+40 * 4)-40 */
     padding-bottom: 4px;
 }
 
-.lunch-set-slider-wrap .btn {
-    position: absolute;
-    top: 50%;
-    left: -5.4rem;
-    transform: translateY(-50%);
-    z-index: 100;
-
-    width: 5rem;
-    height: 50%;
-    /* background: orangered; */
-}
-
-.lunch-set-slider-wrap .btn img {
-    width: 2.5rem;
-    height: 4.8rem;
-}
-
 .lunch-set-slider-wrap .swiper-slide {
     position: relative;
-    width: 46.7rem;
     box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
     opacity: 0.3;
     transition: 0.8s;
@@ -276,6 +255,23 @@
 .lunch-set-slider .swiper-slide {
     transform: scale(0.8);
     transform-origin: 50% 100%;
+}
+
+.lunch-set-slider-wrap .btn {
+    position: absolute;
+    top: 50%;
+    left: -5.4rem;
+    transform: translateY(-50%);
+    z-index: 100;
+
+    width: 5rem;
+    height: 50%;
+    /* background: orangered; */
+}
+
+.lunch-set-slider-wrap .btn img {
+    width: 2.5rem;
+    height: 4.8rem;
 }
 
 .lunch-name {
@@ -735,54 +731,13 @@
     .inner {
         width: 90%;
     }
-}
 
-/* ⊹₊     ˚‧︵‿₊୨୧₊‿︵‧ ˚     ₊⊹ */
-/*          ♥ 추가분기 ♥         */
-/* ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ─── */
-@media screen and (max-width: 1100px) {
-    .inner {
-        width: 74rem;
-        width: 90.2439%;
+    .lunch-set-slider-wrap {
+        height: 50.4rem;
     }
 
-    #header {
-        padding: 0 4rem;
-    }
-
-    #header nav {
-        height: 6rem;
-    }
-
-    .gnb,
-    .btn-login {
-        display: none;
-    }
-
-    .btn-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 2.5rem;
-        background: url(../img/icon-more.svg) no-repeat 50% / cover;
-    }
-
-    .con-text strong {
-        font-size: 1.8rem;
-    }
-
-    .con-text h3 {
-        font-size: 4rem;
-        margin-top: 0.75rem;
-    }
-
-    .con-text p {
-        font-size: 1.8rem;
-    }
-
-    .con-text p br {
-        display: none;
+    .lunch-set-slider-wrap .lunch-set-slider {
+        width: 1200px;
     }
 
     .membership-con {
@@ -822,9 +777,13 @@
     }
 
     .membership-title p + p {
-        font-size: 1.8rem;
+        font-size: clamp(1.8rem, 2vw, 2.4rem);
 
         margin-top: 2rem;
+    }
+
+    .membership-title p + p > br {
+        display: none;
     }
 
     .membership-cards {
@@ -866,25 +825,47 @@
     }
 }
 
-/* 태블릿 분기 */
-
-@media screen and (max-width: 820px) {
-    h3 {
-        font-size: 4rem;
+/* ⊹₊     ˚‧︵‿₊୨୧₊‿︵‧ ˚     ₊⊹ */
+/*          ♥ 추가분기 ♥         */
+/* ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ─── */
+@media screen and (max-width: 1100px) {
+    #header {
+        padding: 0 4rem;
     }
 
-    .promotion-slider .btn {
+    #header nav {
+        height: 6rem;
+    }
+
+    .gnb,
+    .btn-login {
         display: none;
     }
 
-    .detail-con {
-        width: 32rem;
-        height: 45rem;
-        padding: 7.5rem 1rem 7.5rem 3rem;
+    .btn-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 2.5rem;
+        background: url(../img/icon-more.svg) no-repeat 50% / cover;
     }
 
-    .steak-detail li + li > .detail-con {
-        padding: 7.5rem 3rem 7.5rem 1rem;
+    .con-text strong {
+        font-size: 1.8rem;
+    }
+
+    .con-text h3 {
+        font-size: 4rem;
+        margin-top: 0.75rem;
+    }
+
+    .con-text p {
+        font-size: 1.8rem;
+    }
+
+    .con-text p br {
+        display: none;
     }
 
     .con-text h3 {
@@ -895,56 +876,12 @@
         font-size: 1.6rem;
     }
 
-    .lunch-text {
-        width: 21rem;
-    }
-
     .lunch-text h3 {
         font-size: 4.8rem;
     }
 
     .lunch-text p {
         font-size: 2rem;
-    }
-
-    .lunch-set-slider-wrap {
-        width: 52.7rem;
-        height: 40rem;
-    }
-
-    .lunch-set-slider-wrap .lunch-set-slider {
-        width: 560px;
-        height: 400px;
-        /* (270*2)+20 */
-    }
-
-    .lunch-set-slider-wrap .swiper-slide {
-        width: 270px;
-    }
-
-    .lunch-set-slider-wrap .btn {
-        display: none;
-    }
-
-    .lunch-name {
-        bottom: 3rem;
-        right: 3rem;
-        /* width: 18rem; */
-    }
-
-    .lunch-name strong {
-        font-size: 1.8rem;
-        line-height: 1;
-    }
-
-    .lunch-name p {
-        font-size: 1.6rem;
-        line-height: 1;
-    }
-
-    .view-more {
-        width: 21.1rem;
-        height: 6rem;
     }
 
     .store .inner {
@@ -999,6 +936,67 @@
     .store-cards li:hover::after {
         width: 1.5rem;
     }
+}
+
+/* 태블릿 분기 */
+
+@media screen and (max-width: 820px) {
+    h3 {
+        font-size: 4rem;
+    }
+
+    .promotion-slider .btn {
+        display: none;
+    }
+
+    .detail-con {
+        width: 32rem;
+        height: 45rem;
+        padding: 7.5rem 1rem 7.5rem 3rem;
+    }
+
+    .steak-detail li + li > .detail-con {
+        padding: 7.5rem 3rem 7.5rem 1rem;
+    }
+
+    .lunch-set-slider-wrap {
+        /* width: 52.7rem; */
+        height: 40.4rem;
+    }
+
+    .lunch-set-slider-wrap .lunch-set-slider {
+        width: 560px;
+        /* (270*2)+20 */
+    }
+
+    .lunch-set-slider-wrap .swiper-slide {
+        height: 40rem;
+    }
+
+    .lunch-set-slider-wrap .btn {
+        display: none;
+    }
+
+    .lunch-name {
+        bottom: 3rem;
+        right: 3rem;
+        /* width: 18rem; */
+    }
+
+    .lunch-name strong {
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+
+    .lunch-name p {
+        font-size: 1.6rem;
+        line-height: 1;
+    }
+
+    .view-more {
+        width: 21.1rem;
+        height: 6rem;
+    }
 
     .partnership .inner {
         width: 100%;
@@ -1025,11 +1023,6 @@
 /* 모바일 분기 */
 
 @media screen and (max-width: 430px) {
-    .inner {
-        width: 39rem;
-        width: 90.6977%;
-    }
-
     #header nav {
         height: 5rem;
     }
