@@ -79,27 +79,20 @@
     display: flex;
 }
 
-.steak-detail li + li {
+.steak-detail li:nth-child(even) {
     flex-direction: row-reverse;
 }
 
 .detail-con {
-    width: 70.7rem;
-    width: 36.8229%;
-    height: 45rem;
-    padding: 5.5rem 6rem 5.5rem 30rem;
-    padding: 5.5rem 6rem 5.5rem 15.625%;
-    padding: 5.5rem 6rem 5.5rem calc(36.8229% - 35rem);
+    /* width: 70.7rem; */
+    width: 37%;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background: palegreen;
-}
-
-.steak-detail li + li > .detail-con {
-    padding: 5.5rem 30rem 5.5rem 6rem;
-    padding: 5.5rem 15.625% 5.5rem 6rem;
-    padding: 5.5rem calc(36.8229% - 35rem) 5.5rem 6rem;
+    justify-content: center;
+    align-items: flex-start;
+    /* background: palegreen; */
+    padding: 3rem 5rem;
 }
 
 .con-text strong {
@@ -114,13 +107,16 @@
 
 .con-text p {
     font-size: 2rem;
-
     margin-top: 3rem;
 }
 
+.detail-con .view-more {
+    margin-top: 4rem;
+}
+
 .steak-detail li figure {
-    width: 119.3rem;
-    width: 62.1354%;
+    /* width: 119.3rem; */
+    width: 63%;
     height: 45rem;
     overflow: hidden;
 
@@ -139,7 +135,7 @@
 }
 
 .steak-detail li figure::before {
-    content: "";
+    content: '';
     z-index: 100;
 
     position: absolute;
@@ -151,8 +147,8 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.steak-detail li + li figure::before {
-    content: "";
+.steak-detail li:nth-child(even) figure::before {
+    content: '';
 
     position: absolute;
     top: 0;
@@ -176,8 +172,8 @@
     flex-direction: column;
     justify-content: space-between;
 
-    width: 24.3rem;
-    width: 16.875%;
+    width: 21rem;
+    flex-shrink: 0;
 }
 
 .lunch-text strong {
@@ -220,8 +216,7 @@
     */
 
 .lunch-set-slider-wrap {
-    width: 107.5rem;
-    height: 60.4rem;
+    width: calc(100% - 21rem - 12.2rem);
 
     position: relative;
 }
@@ -254,11 +249,10 @@
 
 .lunch-set-slider-wrap .swiper-slide {
     position: relative;
-    width: 46.7rem;
     box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
     opacity: 0.3;
     transition: 0.8s;
-    /* border: 1px solid #000; */
+    border: 1px solid var(--black20p);
 }
 
 .lunch-set-slider-wrap .swiper-slide img {
@@ -329,7 +323,7 @@
 }
 
 .store-cards li::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 4rem;
     left: 4rem;
@@ -342,7 +336,7 @@
     transition: 0.4s;
 }
 .store-cards li::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 4rem;
     left: 14rem;
@@ -365,7 +359,7 @@
 }
 
 .store-cards li a::after {
-    content: "";
+    content: '';
 
     position: absolute;
     bottom: 4rem;
@@ -408,13 +402,11 @@
 
 .membership-con {
     display: flex;
-    gap: 100px;
-    gap: 6.9444%;
+    gap: 6vw;
 }
 
 .membership-text {
     width: 24.5rem;
-    width: 16.875%;
 
     display: flex;
     flex-direction: column;
@@ -459,7 +451,7 @@
 .membership-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem 3.42465%;
+    gap: 2vw;
     width: 100%;
 
     counter-reset: number;
@@ -467,20 +459,20 @@
 
 .membership-cards li {
     width: 34rem;
-    width: 31.0502%;
+    width: calc((100% - 4vw) / 3);
     aspect-ratio: 1/0.8235;
     /* height: 28rem; */
     padding: 6rem 4rem;
     border: 1px solid var(--line-color);
 
-    display: flex;
-    gap: 2rem;
+    /* display: flex;
+    gap: 2rem; */
 
     counter-increment: number;
 }
 
 .membership-cards li::before {
-    content: "0" counter(number);
+    content: '0' counter(number);
 
     font-weight: 900;
     font-size: 2rem;
@@ -506,6 +498,9 @@
 
 .membership-left {
     position: relative;
+
+    width: calc(100% - 6vw - 24.5rem);
+    /* background: skyblue; */
 }
 
 .membership-left a {
@@ -516,6 +511,8 @@
     /* width: 34rem;
     height: 28rem; */
     width: 31.0502%;
+    width: calc((100% - 8rem) / 3);
+
     aspect-ratio: 1/0.8235;
     background: var(--main-color);
     padding: 4rem;
@@ -539,7 +536,7 @@
 }
 
 .membership-left a i::after {
-    content: "";
+    content: '';
     width: 2.2rem;
     aspect-ratio: 1/1;
     /* height: 3.5rem; */
@@ -607,7 +604,7 @@
 }
 
 .follow-slider-wrap::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 0;
@@ -620,7 +617,7 @@
 }
 
 .follow-slider-wrap::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     right: 0;
@@ -658,7 +655,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    font-family: "PuradakGentleGothicR";
+    font-family: 'PuradakGentleGothicR';
     font-size: 2.4rem;
     color: #fff;
 
@@ -677,7 +674,7 @@
 }
 
 .follow-slider .swiper-slide a .insta-id::before {
-    content: "";
+    content: '';
 
     display: block;
     width: 3rem;
@@ -735,16 +732,36 @@
     .inner {
         width: 90%;
     }
+
+    .membership-con {
+        flex-direction: column;
+    }
+
+    .membership-text {
+        width: 100%;
+
+        position: relative;
+    }
+
+    .membership-text .view-more {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .membership-left {
+        width: 100%;
+    }
 }
 
 /* ⊹₊     ˚‧︵‿₊୨୧₊‿︵‧ ˚     ₊⊹ */
 /*          ♥ 추가분기 ♥         */
 /* ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ─── */
 @media screen and (max-width: 1100px) {
-    .inner {
+    /* .inner {
         width: 74rem;
         width: 90.2439%;
-    }
+    } */
 
     #header {
         padding: 0 4rem;
@@ -784,86 +801,6 @@
     .con-text p br {
         display: none;
     }
-
-    .membership-con {
-        flex-direction: column;
-    }
-
-    .membership-text {
-        width: 100%;
-
-        position: relative;
-    }
-
-    .membership-text .view-more {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    .membership-title h3 {
-        font-size: 5.6rem;
-
-        padding-bottom: 1rem;
-        border-bottom: 2px solid var(--title-color);
-    }
-
-    .membership-title strong {
-        font-weight: 700;
-        font-size: 3.6rem;
-    }
-
-    .membership-title p:first-of-type {
-        font-weight: 500;
-        font-size: 2.1rem;
-
-        padding-bottom: 0;
-        border-bottom: none;
-    }
-
-    .membership-title p + p {
-        font-size: 1.8rem;
-
-        margin-top: 2rem;
-    }
-
-    .membership-cards {
-        gap: 2rem 2.4546rem;
-        gap: 2rem 3.317%;
-
-        margin-top: 5rem;
-    }
-
-    .membership-cards li {
-        /* width: 23.3rem;
-        height: 19.8rem; */
-        /* pc에서 %잡은걸아 같음 */
-        padding: 4rem 2rem;
-    }
-
-    .membership-cards li::before {
-        font-size: 1.6rem;
-    }
-
-    .membership-cards li dl dt {
-        font-weight: 500;
-        font-size: 2rem;
-    }
-
-    .membership-cards li dl dd {
-        font-size: 1.4rem;
-
-        margin-top: 1.5rem;
-    }
-
-    .membership-left a {
-        padding: 3rem 2rem;
-    }
-
-    .membership-left a i {
-        font-weight: 700;
-        font-size: 2.4rem;
-    }
 }
 
 /* 태블릿 분기 */
@@ -877,14 +814,28 @@
         display: none;
     }
 
-    .detail-con {
-        width: 32rem;
-        height: 45rem;
-        padding: 7.5rem 1rem 7.5rem 3rem;
+    .steak-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 11rem;
     }
 
-    .steak-detail li + li > .detail-con {
-        padding: 7.5rem 3rem 7.5rem 1rem;
+    .steak-detail li figure {
+        width: 100%;
+        aspect-ratio: 1/93.0233;
+    }
+
+    .steak-detail li figure::before {
+        display: none;
+    }
+
+    .steak-detail li,
+    .steak-detail li:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .detail-con {
+        width: 100%;
     }
 
     .con-text h3 {
@@ -896,7 +847,7 @@
     }
 
     .lunch-text {
-        width: 21rem;
+        /* width: 21rem; */
     }
 
     .lunch-text h3 {
@@ -907,19 +858,16 @@
         font-size: 2rem;
     }
 
+    .lunch-con {
+        gap: 43px;
+    }
+
     .lunch-set-slider-wrap {
-        width: 52.7rem;
-        height: 40rem;
+        width: calc(100% - 210px - 43px);
     }
 
     .lunch-set-slider-wrap .lunch-set-slider {
-        width: 560px;
-        height: 400px;
-        /* (270*2)+20 */
-    }
-
-    .lunch-set-slider-wrap .swiper-slide {
-        width: 270px;
+        width: calc(((270px + 20px) * 2) - 20px);
     }
 
     .lunch-set-slider-wrap .btn {
@@ -1024,12 +972,7 @@
 
 /* 모바일 분기 */
 
-@media screen and (max-width: 430px) {
-    .inner {
-        width: 39rem;
-        width: 90.6977%;
-    }
-
+@media screen and (max-width: 600px) {
     #header nav {
         height: 5rem;
     }
@@ -1064,42 +1007,10 @@
         gap: 1.5rem;
     }
 
-    .steak-detail {
-        display: flex;
-        flex-direction: column;
-        gap: 11rem;
-    }
-
-    .steak-detail li,
-    .steak-detail li + li {
-        flex-direction: column;
-    }
-
-    .detail-con,
-    .steak-detail li + li > .detail-con {
-        width: 39rem;
-        width: 90.6977%;
-        height: 30rem;
-        padding: 0 3rem;
-
-        justify-content: space-between;
-    }
-
-    .steak-detail li figure {
-        width: 100%;
-        /* height: 40rem; */
-        aspect-ratio: 1/93.0233;
-
-        margin-top: 3.5rem;
-    }
-
-    .steak-detail li figure::before {
-        display: none;
-    }
-
     .lunch-con {
         flex-direction: column;
         gap: 5rem;
+        width: 100%;
     }
 
     .lunch-text {
@@ -1119,21 +1030,11 @@
     }
 
     .lunch-set-slider-wrap {
-        width: 41rem;
-        width: 95.3488%;
-        height: 48.5rem;
-        /* border: 1px solid #000; */
+        width: 100%;
     }
 
     .lunch-set-slider-wrap .lunch-set-slider {
-        width: 100%;
-        height: 485px;
-        /* (345*2)+20 */
-    }
-
-    .lunch-set-slider-wrap .swiper-slide {
-        width: 345px;
-        width: 84.1463%;
+        width: calc(((345px + 20px) * 2) - 20px);
     }
 
     .store-cards {
@@ -1279,7 +1180,7 @@
     }
 
     .foot-app a::before {
-        content: "";
+        content: '';
 
         display: block;
         width: 3.2rem;
