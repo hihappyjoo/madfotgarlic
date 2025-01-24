@@ -84,28 +84,33 @@
 }
 
 .detail-con {
-    width: 70.7rem;
+    /* width: 70.7rem; */
     width: 36.8229%;
     height: 45rem;
-    padding: 5.5rem 6rem 5.5rem 30rem;
-    padding: 5.5rem 6rem 5.5rem 15.625%;
-    padding: 5.5rem 6rem 5.5rem calc(36.8229% - 35rem);
+    /* padding: 5.5rem 6rem 5.5rem 30rem;
+    padding: 5.5rem 6rem 5.5rem 15.625%; */
+    padding: 5rem 6rem 5rem calc(36.8229% - 45rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: palegreen;
 }
 
 .steak-detail li + li > .detail-con {
-    padding: 5.5rem 30rem 5.5rem 6rem;
-    padding: 5.5rem 15.625% 5.5rem 6rem;
-    padding: 5.5rem calc(36.8229% - 35rem) 5.5rem 6rem;
+    /* padding: 5.5rem 30rem 5.5rem 6rem;
+    padding: 5.5rem 15.625% 5.5rem 6rem; */
+    padding: 5rem calc(36.8229% - 40rem) 5rem 6rem;
 }
 
 .con-text strong {
     font-weight: 700;
     font-size: 2rem;
     color: var(--title-color);
+}
+
+.con-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .con-text h3 {
@@ -409,8 +414,10 @@
 }
 
 .membership-text {
-    width: 24.5rem;
-    width: 16.875%;
+    /* width: 24.5rem; */
+    /* width: 16.875%;
+    flex-shrink: 0; */
+    flex: 1 0 16.875%;
 
     display: flex;
     flex-direction: column;
@@ -418,7 +425,7 @@
 }
 
 .membership-title h3 {
-    font-size: max(2.8vw, 4.8rem);
+    font-size: 4.8rem;
 }
 
 .membership-title strong {
@@ -426,7 +433,6 @@
 
     font-weight: 500;
     font-size: 3.2rem;
-    font-size: 1.6667vw;
     line-height: 1;
 
     margin-top: 2rem;
@@ -435,7 +441,7 @@
 .membership-title p:first-of-type {
     font-weight: 400;
     font-size: 1.8rem;
-    letter-spacing: -1.6%;
+    letter-spacing: -2%;
 
     padding-bottom: 0.2rem;
     border-bottom: 2px solid var(--title-color);
@@ -455,7 +461,7 @@
 .membership-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem 3.42465%;
+    gap: 2.0833vw 3.42465%;
     width: 100%;
 
     counter-reset: number;
@@ -466,7 +472,8 @@
     width: 31.0502%;
     aspect-ratio: 1/0.8235;
     /* height: 28rem; */
-    padding: 6rem 4rem;
+    /* padding: 6rem 4rem; */
+    padding: 3.125vw 2.0833vw;
     border: 1px solid var(--line-color);
 
     display: flex;
@@ -480,7 +487,6 @@
 
     font-weight: 900;
     font-size: 2rem;
-    /* font-size: max(1.6rem, 1.04166vw); */
     color: var(--main-color);
 
     margin-top: 0.2rem;
@@ -698,7 +704,7 @@
     /* .follow-slider-wrap:
     overflow:visible 삭제, padding bottom추가.
     pagenation을 .follow-slider-wrap의 자식으로 올려서 posa하니까 swiper.js가 안 먹는거가틈.. ㅜㅜ
-    어머나 세상에 씨발!
+
     body에 postion:relative가 있으니까 bulletDynamic이랑 slider 튀어나가는 overflow-x:hidden 문제가 모두 해결됨 
     */
 }
@@ -741,87 +747,49 @@
     }
 
     .membership-con {
-        flex-direction: column;
-    }
-
-    .membership-text {
-        width: 100%;
-
-        position: relative;
-    }
-
-    .membership-text .view-more {
-        position: absolute;
-        top: 0;
-        right: 0;
+        gap: 5%;
     }
 
     .membership-title h3 {
-        font-size: 5.6rem;
-
-        padding-bottom: 1rem;
-        border-bottom: 2px solid var(--title-color);
+        font-size: 3.2vw;
     }
 
     .membership-title strong {
-        font-weight: 700;
-        font-size: 3.6rem;
+        font-size: 1.6667vw;
     }
 
     .membership-title p:first-of-type {
-        font-weight: 500;
-        font-size: 2.1rem;
-
-        padding-bottom: 0;
-        border-bottom: none;
+        font-size: 1.15vw;
+        letter-spacing: -5%;
     }
 
     .membership-title p + p {
-        font-size: clamp(1.8rem, 2vw, 2.4rem);
-
-        margin-top: 2rem;
-    }
-
-    .membership-title p + p > br {
-        display: none;
-    }
-
-    .membership-cards {
-        gap: 2rem 2.4546rem;
-        gap: 2rem 3.317%;
-
-        margin-top: 5rem;
-    }
-
-    .membership-cards li {
-        /* width: 23.3rem;
-        height: 19.8rem; */
-        /* pc에서 %잡은걸아 같음 */
-        padding: 4rem 2rem;
-    }
-
-    .membership-cards li::before {
-        font-size: 1.6rem;
+        font-size: 1.5vw;
     }
 
     .membership-cards li dl dt {
-        font-weight: 500;
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 1.667vw, 2.4rem);
     }
 
     .membership-cards li dl dd {
-        font-size: 1.4rem;
-
-        margin-top: 1.5rem;
+        font-size: clamp(1.4rem, 1.389vw, 2rem);
     }
 
-    .membership-left a {
-        padding: 3rem 2rem;
+    .partnership .inner {
+        width: 100%;
     }
 
-    .membership-left a i {
-        font-weight: 700;
-        font-size: 2.4rem;
+    .partnership-cards li a {
+        height: 18rem;
+        padding: 3rem 4rem;
+    }
+
+    .partnership-cards li a dl dt {
+        font-size: 3rem;
+    }
+
+    .partnership-cards li a dl dd {
+        font-size: max(1.4vw, 1.5rem);
     }
 }
 
@@ -936,6 +904,95 @@
     .store-cards li:hover::after {
         width: 1.5rem;
     }
+
+    .view-more {
+        width: 21.1rem !important;
+        height: 6rem;
+    }
+
+    .membership-con {
+        flex-direction: column;
+    }
+
+    .membership-text {
+        width: 100%;
+
+        position: relative;
+    }
+
+    .membership-text .view-more {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .membership-title h3 {
+        font-size: 5.6rem;
+
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--title-color);
+    }
+
+    .membership-title strong {
+        font-weight: 700;
+        font-size: 3.6rem;
+    }
+
+    .membership-title p:first-of-type {
+        font-weight: 500;
+        font-size: 2.1rem;
+
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .membership-title p + p {
+        font-size: clamp(1.8rem, 2vw, 2.4rem);
+
+        margin-top: 2rem;
+    }
+
+    .membership-title p + p > br {
+        display: none;
+    }
+
+    .membership-cards {
+        gap: 2rem 2.4546rem;
+        gap: 2rem 3.317%;
+
+        margin-top: 5rem;
+    }
+
+    .membership-cards li {
+        /* width: 23.3rem;
+        height: 19.8rem; */
+        /* pc에서 %잡은걸아 같음 */
+        padding: 4rem 2rem;
+    }
+
+    .membership-cards li::before {
+        font-size: max(1.3889vw, 1.6rem);
+    }
+
+    .membership-cards li dl dt {
+        font-weight: 600;
+        font-size: max(2.2vw, 2rem);
+    }
+
+    .membership-cards li dl dd {
+        font-size: max(1.8vw, 1.6rem);
+
+        margin-top: 1.5rem;
+    }
+
+    .membership-left a {
+        padding: 3rem 2rem;
+    }
+
+    .membership-left a i {
+        font-weight: 700;
+        font-size: 2.4rem;
+    }
 }
 
 /* 태블릿 분기 */
@@ -993,26 +1050,8 @@
         line-height: 1;
     }
 
-    .view-more {
-        width: 21.1rem;
-        height: 6rem;
-    }
-
-    .partnership .inner {
-        width: 100%;
-    }
-
-    .partnership-cards li a {
-        height: 18rem;
-        padding: 3rem 4rem;
-    }
-
-    .partnership-cards li a dl dt {
-        font-size: 3rem;
-    }
-
-    .partnership-cards li a dl dd {
-        font-size: 1.5rem;
+    .membership-cards li dl dt {
+        font-weight: 500;
     }
 
     .follow-title h3 {

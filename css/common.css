@@ -79,7 +79,8 @@ hr,
     align-items: center;
 }
 
-.lunch-con .view-more {
+.lunch-con .view-more,
+.membership .view-more {
     width: 100%;
 }
 
