@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+#main .visual {
+    width: 100%;
+    height: 60rem;
+    padding: 0;
+    padding-top: 9rem;
+    /* 이거 자동으로로.....헤더.......밑에 딱..붙게는 불가능? */
+
+    position: relative;
+}
+
+.visual::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 60rem;
+    background-color: var(--black30p);
+}
+
+.visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual .visual-text {
+    position: absolute;
+    top: 50%;
+    left: 38rem;
+    transform: translateY(-25%);
+}
+
+.visual .visual-text strong {
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+.visual .visual-text strong i {
+    font-weight: 700;
+}
+
+#main nav {
+    box-shadow: 0 2px 4px var(--black10p);
+}
+
+nav .sub-menu {
+    display: flex;
+    padding: 0 3rem;
+    justify-content: space-between;
+}
+
+nav .sub-menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 8rem;
+    padding: 0 2rem;
+
+    font-weight: 500;
+    font-size: 2rem;
+    color: #666;
+}
+
+.info h4 {
+    font-weight: 700;
+    font-size: 4rem;
+    padding: 1rem 5rem;
+
+    border-bottom: 1.5px solid #000;
+}
+
+.info .info-text {
+    padding: 0 12.2rem;
+}
+
+.info .info-text p {
+    font-size: 3.2rem;
+
+    margin-top: 8rem;
+}
+
+.info .info-text p strong {
+    font-weight: 700;
+}
+
+.info .info-text p + p {
+    font-size: 2.4rem;
+    color: #666;
+
+    margin-top: 0;
+}
+
+.info .info-text .info-pic {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10rem;
+}
+
+.info .info-text .info-pic li {
+    width: 26rem;
+    height: 26rem;
+
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.info .info-text .info-pic li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

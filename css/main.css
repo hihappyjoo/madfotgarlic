@@ -227,7 +227,6 @@
 
 .lunch-set-slider-wrap {
     width: calc(100% - 33.2rem);
-    height: 60.4rem;
 
     position: relative;
 }
@@ -465,6 +464,10 @@
     width: 100%;
 
     counter-reset: number;
+}
+
+.membership .view-more {
+    background-color: #d2b48c;
 }
 
 .membership-cards li {
@@ -734,14 +737,6 @@
 /* RWD */
 
 @media screen and (max-width: 1440px) {
-    .inner {
-        width: 90%;
-    }
-
-    .lunch-set-slider-wrap {
-        height: 50.4rem;
-    }
-
     .lunch-set-slider-wrap .lunch-set-slider {
         width: 1200px;
     }
@@ -797,26 +792,10 @@
 /*          ♥ 추가분기 ♥         */
 /* ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ─── */
 @media screen and (max-width: 1100px) {
-    #header {
-        padding: 0 4rem;
-    }
-
-    #header nav {
+    .lunch-con .view-more,
+    .membership-con .view-more {
+        width: 21.1rem;
         height: 6rem;
-    }
-
-    .gnb,
-    .btn-login {
-        display: none;
-    }
-
-    .btn-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 2.5rem;
-        background: url(../img/icon-more.svg) no-repeat 50% / cover;
     }
 
     .con-text strong {
@@ -838,10 +817,6 @@
 
     .con-text h3 {
         margin-top: 0.5rem;
-    }
-
-    .con-text p {
-        font-size: 1.6rem;
     }
 
     .lunch-text h3 {
@@ -905,8 +880,8 @@
         width: 1.5rem;
     }
 
-    .view-more {
-        width: 21.1rem !important;
+    .membership .view-more {
+        width: 21.1rem;
         height: 6rem;
     }
 
@@ -998,10 +973,6 @@
 /* 태블릿 분기 */
 
 @media screen and (max-width: 820px) {
-    h3 {
-        font-size: 4rem;
-    }
-
     .promotion-slider .btn {
         display: none;
     }
@@ -1016,18 +987,14 @@
         padding: 7.5rem 3rem 7.5rem 1rem;
     }
 
-    .lunch-set-slider-wrap {
-        /* width: 52.7rem; */
-        height: 40.4rem;
-    }
+    /* .lunch-set-slider-wrap {
+        width: 52.7rem;
+        width: calc(100% - 33.2rem);
+    } */
 
     .lunch-set-slider-wrap .lunch-set-slider {
         width: 560px;
         /* (270*2)+20 */
-    }
-
-    .lunch-set-slider-wrap .swiper-slide {
-        height: 40rem;
     }
 
     .lunch-set-slider-wrap .btn {
@@ -1050,8 +1017,26 @@
         line-height: 1;
     }
 
+    .membership-cards li {
+        width: calc((100% - 3.45465%) / 2);
+        padding: 7.3171vw 4.878vw;
+    }
+
     .membership-cards li dl dt {
-        font-weight: 500;
+        font-size: max(2rem, 3.0488vw);
+    }
+
+    .membership-cards li dl dd {
+        font-size: max(1.6rem, 2.1951vw);
+    }
+
+    .membership-left a {
+        width: calc((100% - 3.45465%) / 2);
+        padding: 4rem;
+    }
+
+    .membership-left a i {
+        font-size: 3.9024vw;
     }
 
     .follow-title h3 {
@@ -1059,43 +1044,11 @@
     }
 }
 
-/* 모바일 분기 */
+/* ⊹₊     ˚‧︵‿₊୨୧₊‿︵‧ ˚     ₊⊹ */
+/*          ♥ 추가분기2 ♥         */
+/* ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ─── */
 
-@media screen and (max-width: 430px) {
-    #header nav {
-        height: 5rem;
-    }
-
-    #header nav h1 a {
-        display: block;
-        width: 13.2rem;
-        height: 2rem;
-    }
-
-    #header nav h1 a img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .btn-menu {
-        width: 2rem;
-        height: 1.5rem;
-    }
-
-    .promotion-slider .swiper-pagination-bullet {
-        width: 1.2rem;
-        height: 1.2rem;
-    }
-
-    .promotion-slider .swiper-pagination-bullet-active {
-        width: 1.8rem;
-        height: 1.8rem;
-    }
-
-    .promotion-slider .swiper-pagination {
-        gap: 1.5rem;
-    }
-
+@media screen and (max-width: 650px) {
     .steak-detail {
         display: flex;
         flex-direction: column;
@@ -1109,7 +1062,7 @@
 
     .detail-con,
     .steak-detail li + li > .detail-con {
-        width: 39rem;
+        /* width: 39rem; */
         width: 90.6977%;
         height: 30rem;
         padding: 0 3rem;
@@ -1153,13 +1106,11 @@
     .lunch-set-slider-wrap {
         width: 41rem;
         width: 95.3488%;
-        height: 48.5rem;
         /* border: 1px solid #000; */
     }
 
     .lunch-set-slider-wrap .lunch-set-slider {
         width: 100%;
-        height: 485px;
         /* (345*2)+20 */
     }
 
@@ -1214,6 +1165,16 @@
         transition: 0.4s 0.2s;
     }
 
+    .follow-slider .swiper-slide a .insta-id {
+        font-size: 2rem;
+    }
+}
+
+/* ⊹₊     ˚‧︵‿₊୨୧₊‿︵‧ ˚     ₊⊹ */
+/*          ♥ 추가분기3 ♥         */
+/* ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ─── */
+
+@media screen and (max-width: 550px) {
     .membership-title h3 {
         font-size: 5.4rem;
     }
@@ -1259,7 +1220,6 @@
 
         width: calc((100% - 2rem) / 2);
         height: 8rem;
-        background-color: #d2b48c;
     }
 
     .membership-left a {
@@ -1273,11 +1233,6 @@
         justify-content: center;
         align-items: center;
         gap: 5px;
-    }
-
-    .membership-left a i {
-        font-weight: 600;
-        font-size: 2rem;
     }
 
     .partnership-cards {
@@ -1295,8 +1250,27 @@
     .partnership-cards li a {
         height: 15rem;
     }
+}
 
-    .follow-slider .swiper-slide a .insta-id {
+/* 모바일 분기 */
+
+@media screen and (max-width: 430px) {
+    .promotion-slider .swiper-pagination-bullet {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .promotion-slider .swiper-pagination-bullet-active {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .promotion-slider .swiper-pagination {
+        gap: 1.5rem;
+    }
+
+    .membership-left a i {
+        font-weight: 600;
         font-size: 2rem;
     }
 
