@@ -1273,22 +1273,4 @@
         font-weight: 600;
         font-size: 2rem;
     }
-
-    .foot-app a {
-        padding: 1.5rem;
-        border-radius: 5rem;
-        background: #fff;
-    }
-
-    .foot-app a i {
-        display: none;
-    }
-
-    .foot-app a::before {
-        content: "";
-
-        display: block;
-        width: 3.2rem;
-        height: 3.2rem;
-    }
 }

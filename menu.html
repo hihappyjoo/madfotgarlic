@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
         <link rel="stylesheet" href="./css/lunch.css" />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body>
         <header id="header">
@@ -26,6 +29,7 @@
                     <li><a href="#">커뮤니티</a></li>
                 </ul>
                 <button type="button" class="btn btn-login">로그인</button>
+                <button type="button" class="btn btn-menu"><i class="hidden">메뉴</i></button>
             </nav>
         </header>
         <hr />
@@ -36,24 +40,29 @@
                     <h2>LUNCH SET</h2>
                     <strong>
                         매일 오후 4시까지<br />
-                        풀코스로 즐기는 <i>런치 세트메뉴</i>
+                        풀코스로 즐기는 <br>
+                        <i>런치 세트메뉴</i>
                     </strong>
                 </div>
             </section>
 
             <nav>
                 <div class="inner">
-                    <ul class="sub-menu">
-                        <li><a href="#">에피타이저 & 샐러드</a></li>
-                        <li><a href="#">파스타 & 라이스</a></li>
-                        <li><a href="#">피자</a></li>
-                        <li><a href="#">스테이크</a></li>
-                        <li><a href="#">시그니처 스테이크 세트</a></li>
-                        <li><a href="#">런치세트</a></li>
-                        <li><a href="#">음료</a></li>
-                        <li><a href="#">와인</a></li>
-                        <li><a href="#">디저트</a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <div class="sub-menu-swiper swiper">
+                            <div class="sub-menu-swiper-wrapper swiper-wrapper">
+                                <div class="swiper-slide"><a href="#">에피타이저 & 샐러드</a></div>
+                                <div class="swiper-slide"><a href="#">파스타 & 라이스</a></div>
+                                <div class="swiper-slide"><a href="#">피자</a></div>
+                                <div class="swiper-slide"><a href="#">스테이크</a></div>
+                                <div class="swiper-slide"><a href="#">시그니처 스테이크 세트</a></div>
+                                <div class="swiper-slide"><a href="#">런치세트</a></div>
+                                <div class="swiper-slide"><a href="#">음료</a></div>
+                                <div class="swiper-slide"><a href="#">와인</a></div>
+                                <div class="swiper-slide"><a href="#">디저트</a></div>
+                            </div>
+
+                    </div>
                 </div>
             </nav>
 
@@ -404,5 +413,7 @@
                 <p>COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</p>
             </address>
         </footer>
+
+        <script src="./js/menu.js"></script>
     </body>
 </html>
