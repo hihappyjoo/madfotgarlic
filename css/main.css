@@ -79,12 +79,22 @@
     display: flex;
 }
 
-.steak-detail li + li {
+.steak-detail li:nth-child(even) {
     flex-direction: row-reverse;
 }
 
 .detail-con {
     /* width: 70.7rem; */
+<<<<<<< HEAD
+    width: 37%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* background: palegreen; */
+    padding: 3rem 5rem;
+=======
     width: 36.8229%;
     height: 45rem;
     /* padding: 5.5rem 6rem 5.5rem 30rem;
@@ -99,6 +109,7 @@
     /* padding: 5.5rem 30rem 5.5rem 6rem;
     padding: 5.5rem 15.625% 5.5rem 6rem; */
     padding: 5rem calc(36.8229% - 40rem) 5rem 6rem;
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
 }
 
 .con-text strong {
@@ -119,13 +130,16 @@
 
 .con-text p {
     font-size: 2rem;
-
     margin-top: 3rem;
 }
 
+.detail-con .view-more {
+    margin-top: 4rem;
+}
+
 .steak-detail li figure {
-    width: 119.3rem;
-    width: 62.1354%;
+    /* width: 119.3rem; */
+    width: 63%;
     height: 45rem;
     overflow: hidden;
     flex-grow: 1;
@@ -145,7 +159,7 @@
 }
 
 .steak-detail li figure::before {
-    content: "";
+    content: '';
     z-index: 100;
 
     position: absolute;
@@ -157,8 +171,8 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.steak-detail li + li figure::before {
-    content: "";
+.steak-detail li:nth-child(even) figure::before {
+    content: '';
 
     position: absolute;
     top: 0;
@@ -226,7 +240,11 @@
     */
 
 .lunch-set-slider-wrap {
+<<<<<<< HEAD
+    width: calc(100% - 21rem - 12.2rem);
+=======
     width: calc(100% - 33.2rem);
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
 
     position: relative;
 }
@@ -241,7 +259,7 @@
     box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
     opacity: 0.3;
     transition: 0.8s;
-    /* border: 1px solid #000; */
+    border: 1px solid var(--black20p);
 }
 
 .lunch-set-slider-wrap .swiper-slide img {
@@ -329,7 +347,7 @@
 }
 
 .store-cards li::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 4rem;
     left: 4rem;
@@ -342,7 +360,7 @@
     transition: 0.4s;
 }
 .store-cards li::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 4rem;
     left: 14rem;
@@ -365,7 +383,7 @@
 }
 
 .store-cards li a::after {
-    content: "";
+    content: '';
 
     position: absolute;
     bottom: 4rem;
@@ -408,15 +426,18 @@
 
 .membership-con {
     display: flex;
-    gap: 100px;
-    gap: 6.9444%;
+    gap: 6vw;
 }
 
 .membership-text {
+<<<<<<< HEAD
+    width: 24.5rem;
+=======
     /* width: 24.5rem; */
     /* width: 16.875%;
     flex-shrink: 0; */
     flex: 1 0 16.875%;
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
 
     display: flex;
     flex-direction: column;
@@ -460,7 +481,11 @@
 .membership-cards {
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
+    gap: 2vw;
+=======
     gap: 2.0833vw 3.42465%;
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
     width: 100%;
 
     counter-reset: number;
@@ -472,21 +497,21 @@
 
 .membership-cards li {
     width: 34rem;
-    width: 31.0502%;
+    width: calc((100% - 4vw) / 3);
     aspect-ratio: 1/0.8235;
     /* height: 28rem; */
     /* padding: 6rem 4rem; */
     padding: 3.125vw 2.0833vw;
     border: 1px solid var(--line-color);
 
-    display: flex;
-    gap: 2rem;
+    /* display: flex;
+    gap: 2rem; */
 
     counter-increment: number;
 }
 
 .membership-cards li::before {
-    content: "0" counter(number);
+    content: '0' counter(number);
 
     font-weight: 900;
     font-size: 2rem;
@@ -511,6 +536,9 @@
 
 .membership-left {
     position: relative;
+
+    width: calc(100% - 6vw - 24.5rem);
+    /* background: skyblue; */
 }
 
 .membership-left a {
@@ -521,6 +549,8 @@
     /* width: 34rem;
     height: 28rem; */
     width: 31.0502%;
+    width: calc((100% - 8rem) / 3);
+
     aspect-ratio: 1/0.8235;
     background: var(--main-color);
     padding: 4rem;
@@ -544,7 +574,7 @@
 }
 
 .membership-left a i::after {
-    content: "";
+    content: '';
     width: 2.2rem;
     aspect-ratio: 1/1;
     /* height: 3.5rem; */
@@ -612,7 +642,7 @@
 }
 
 .follow-slider-wrap::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 0;
@@ -625,7 +655,7 @@
 }
 
 .follow-slider-wrap::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     right: 0;
@@ -663,7 +693,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    font-family: "PuradakGentleGothicR";
+    font-family: 'PuradakGentleGothicR';
     font-size: 2.4rem;
     color: #fff;
 
@@ -682,7 +712,7 @@
 }
 
 .follow-slider .swiper-slide a .insta-id::before {
-    content: "";
+    content: '';
 
     display: block;
     width: 3rem;
@@ -786,15 +816,48 @@
     .partnership-cards li a dl dd {
         font-size: max(1.4vw, 1.5rem);
     }
+
+    .membership-con {
+        flex-direction: column;
+    }
+
+    .membership-text {
+        width: 100%;
+
+        position: relative;
+    }
+
+    .membership-text .view-more {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .membership-left {
+        width: 100%;
+    }
 }
 
 /* ⊹₊     ˚‧︵‿₊୨୧₊‿︵‧ ˚     ₊⊹ */
 /*          ♥ 추가분기 ♥         */
 /* ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ─── */
 @media screen and (max-width: 1100px) {
+<<<<<<< HEAD
+    /* .inner {
+        width: 74rem;
+        width: 90.2439%;
+    } */
+
+    #header {
+        padding: 0 4rem;
+    }
+
+    #header nav {
+=======
     .lunch-con .view-more,
     .membership-con .view-more {
         width: 21.1rem;
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
         height: 6rem;
     }
 
@@ -814,11 +877,61 @@
     .con-text p br {
         display: none;
     }
+<<<<<<< HEAD
+}
+
+/* 태블릿 분기 */
+
+@media screen and (max-width: 820px) {
+    h3 {
+        font-size: 4rem;
+    }
+
+    .promotion-slider .btn {
+        display: none;
+    }
+
+    .steak-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 11rem;
+    }
+
+    .steak-detail li figure {
+        width: 100%;
+        aspect-ratio: 1/93.0233;
+    }
+
+    .steak-detail li figure::before {
+        display: none;
+    }
+
+    .steak-detail li,
+    .steak-detail li:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .detail-con {
+        width: 100%;
+    }
+=======
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
 
     .con-text h3 {
         margin-top: 0.5rem;
     }
 
+<<<<<<< HEAD
+    .con-text p {
+        font-size: 1.6rem;
+    }
+
+    .lunch-text {
+        /* width: 21rem; */
+    }
+
+=======
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
     .lunch-text h3 {
         font-size: 4.8rem;
     }
@@ -827,6 +940,46 @@
         font-size: 2rem;
     }
 
+<<<<<<< HEAD
+    .lunch-con {
+        gap: 43px;
+    }
+
+    .lunch-set-slider-wrap {
+        width: calc(100% - 210px - 43px);
+    }
+
+    .lunch-set-slider-wrap .lunch-set-slider {
+        width: calc(((270px + 20px) * 2) - 20px);
+    }
+
+    .lunch-set-slider-wrap .btn {
+        display: none;
+    }
+
+    .lunch-name {
+        bottom: 3rem;
+        right: 3rem;
+        /* width: 18rem; */
+    }
+
+    .lunch-name strong {
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+
+    .lunch-name p {
+        font-size: 1.6rem;
+        line-height: 1;
+    }
+
+    .view-more {
+        width: 21.1rem;
+        height: 6rem;
+    }
+
+=======
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
     .store .inner {
         width: 100%;
     }
@@ -1044,6 +1197,45 @@
     }
 }
 
+<<<<<<< HEAD
+/* 모바일 분기 */
+
+@media screen and (max-width: 600px) {
+    #header nav {
+        height: 5rem;
+    }
+
+    #header nav h1 a {
+        display: block;
+        width: 13.2rem;
+        height: 2rem;
+    }
+
+    #header nav h1 a img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn-menu {
+        width: 2rem;
+        height: 1.5rem;
+    }
+
+    .promotion-slider .swiper-pagination-bullet {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .promotion-slider .swiper-pagination-bullet-active {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .promotion-slider .swiper-pagination {
+        gap: 1.5rem;
+    }
+
+=======
 /* ⊹₊     ˚‧︵‿₊୨୧₊‿︵‧ ˚     ₊⊹ */
 /*          ♥ 추가분기2 ♥         */
 /* ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ─── */
@@ -1082,9 +1274,11 @@
         display: none;
     }
 
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
     .lunch-con {
         flex-direction: column;
         gap: 5rem;
+        width: 100%;
     }
 
     .lunch-text {
@@ -1104,6 +1298,13 @@
     }
 
     .lunch-set-slider-wrap {
+<<<<<<< HEAD
+        width: 100%;
+    }
+
+    .lunch-set-slider-wrap .lunch-set-slider {
+        width: calc(((345px + 20px) * 2) - 20px);
+=======
         width: 41rem;
         width: 95.3488%;
         /* border: 1px solid #000; */
@@ -1117,6 +1318,7 @@
     .lunch-set-slider-wrap .swiper-slide {
         width: 345px;
         width: 84.1463%;
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
     }
 
     .store-cards {
@@ -1273,4 +1475,25 @@
         font-weight: 600;
         font-size: 2rem;
     }
+<<<<<<< HEAD
+
+    .foot-app a {
+        padding: 1.5rem;
+        border-radius: 5rem;
+        background: #fff;
+    }
+
+    .foot-app a i {
+        display: none;
+    }
+
+    .foot-app a::before {
+        content: '';
+
+        display: block;
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+=======
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f
 }
