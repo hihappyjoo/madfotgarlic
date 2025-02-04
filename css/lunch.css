@@ -11,7 +11,7 @@
 }
 
 .visual::before {
-    content: "";
+    content: '';
 
     position: absolute;
     top: 0;
@@ -214,7 +214,7 @@ h3 {
     opacity: 1;
 }
 .menu-list li .menu-info::after {
-    content: "";
+    content: '';
 
     display: flex;
     width: 50px;
