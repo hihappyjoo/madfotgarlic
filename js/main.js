@@ -5,7 +5,11 @@ const promotionSlider = new Swiper('.promotion-slider', {
 
     // If we need pagination
     pagination: {
+<<<<<<< HEAD:js/script.js
         el: '.swiper-pagination',
+=======
+        el: ".promotion-slider-wrap .swiper-pagination",
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f:js/main.js
         clickable: true,
     },
 
@@ -28,7 +32,21 @@ const lunchSetSlider = new Swiper('.lunch-set-slider', {
 
     // 반응형 분기점
     breakpoints: {
+<<<<<<< HEAD:js/script.js
         820: {
+=======
+        650: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+
+        820: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+
+        1440: {
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f:js/main.js
             slidesPerView: 4,
             spaceBetween: 40,
         },
@@ -44,17 +62,22 @@ const followSlider = new Swiper('.follow-slider', {
     // Optional parameters
     loop: true,
     slidesPerView: 1.7,
-    spaceBetween: 19,
 
     // 반응형 분기점
     breakpoints: {
-        820: {
-            slidesPerView: 2.8,
-            spaceBetween: 19,
+        // 430: {
+        //     slidesPerView: 2.8,
+        //     spaceBetween: 19,
+        // },
+        650: {
+            slidesPerView: 3,
         },
-        1440: {
-            slidesPerView: 6,
-            spaceBetween: 19,
+        820: {
+            slidesPerView: 4.5,
+        },
+
+        1400: {
+            slidesPerView: 6.5,
         },
     },
 
@@ -62,7 +85,11 @@ const followSlider = new Swiper('.follow-slider', {
 
     // If we need pagination
     pagination: {
+<<<<<<< HEAD:js/script.js
         el: '.swiper-pagination',
+=======
+        el: ".follow-slider-wrap .swiper-pagination",
+>>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f:js/main.js
         dynamicBullets: true,
         dynamicMainBullets: 1,
     },

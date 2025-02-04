@@ -1,0 +1,484 @@
+@charset "utf-8";
+
+#main .visual {
+    width: 100%;
+    height: 60rem;
+    padding: 0;
+    margin-top: 9rem;
+    /* 이거 자동으로로.....헤더.......밑에 딱..붙게는 불가능? */
+
+    position: relative;
+}
+
+.visual::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 60rem;
+    background-color: var(--black30p);
+}
+
+.visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual .visual-text {
+    position: absolute;
+    top: 50%;
+    left: 19.7917vw;
+    transform: translateY(-50%);
+}
+
+.visual .visual-text strong {
+    display: block;
+    font-size: 2.4rem;
+    color: #fff;
+
+    margin-top: 1.8rem;
+}
+
+.visual .visual-text strong i {
+    font-weight: 700;
+}
+
+.visual .visual-text br + br {
+    display: none;
+}
+
+/* e-visual */
+
+.info h4 {
+    font-weight: 700;
+    font-size: 4rem;
+    padding: 1rem 5rem;
+
+    border-bottom: 1.5px solid #000;
+}
+
+.info .info-text {
+    padding: 0 12.2rem;
+}
+
+.info .info-text p {
+    font-size: 3.2rem;
+
+    margin-top: 8rem;
+}
+
+.info .info-text p strong {
+    font-weight: 700;
+}
+
+.info .info-text p + p {
+    font-size: 2.4rem;
+    color: #666;
+
+    margin-top: 0;
+}
+
+.info .info-text .info-pic {
+    display: flex;
+    gap: 2rem;
+    /* justify-content: space-between; */
+
+    margin-top: 10rem;
+}
+
+.info .info-text .info-pic li {
+    width: 26rem;
+    width: 21.7391vw;
+    aspect-ratio: 1;
+    /* height: 26rem; */
+
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.info .info-text .info-pic li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* e-info */
+
+h3 {
+    padding: 2rem 5rem;
+    border-bottom: 1px solid #000;
+}
+
+.menu-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 6rem;
+}
+
+.menu-list li {
+    flex: 1 1 calc((100% - 2rem) / 2);
+    height: 52rem;
+    overflow: hidden;
+    border: 1px solid rgba(137, 118, 93, 0.3);
+
+    position: relative;
+}
+
+.menu-list li a > img {
+    width: 100%;
+    height: 100%;
+    margin-top: -80px;
+    object-fit: cover;
+}
+
+.menu-list .badge-new {
+    position: absolute;
+    top: 0;
+    height: 0;
+
+    display: flex;
+    width: 66px;
+    height: 66px;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 2rem;
+
+    background: var(--bg-color);
+}
+
+.menu-list li .menu-title {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+
+    display: flex;
+    width: 38.6rem;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.menu-list li .menu-title strong {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #000;
+}
+
+.menu-list li .menu-title p + p {
+    font-size: 2rem;
+
+    margin-top: 1.5rem;
+}
+
+.menu-list li .menu-badge {
+    display: flex;
+    gap: 0.5rem;
+    line-height: 1;
+    justify-content: end;
+    align-items: center;
+}
+
+.menu-list li .menu-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 10rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    background: var(--black80p);
+
+    color: #fff;
+
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.menu-list li:hover .menu-info {
+    opacity: 1;
+}
+.menu-list li .menu-info::after {
+    content: "";
+
+    display: flex;
+    width: 50px;
+    height: 50px;
+
+    background: url(../img/icon-plus.svg) no-repeat 50%;
+
+    margin-top: 6rem;
+}
+
+.menu-list li .menu-info strong {
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+
+.menu-list li .menu-info p {
+    font-size: 2rem;
+}
+.menu-list li .menu-info p + p {
+    margin-top: 2rem;
+}
+
+/* e-menu for all */
+
+.salad-list li {
+    width: 71rem;
+    height: 52rem;
+    overflow: hidden;
+    border: 1px solid rgba(137, 118, 93, 0.3);
+
+    position: relative;
+}
+
+.salad-list li .menu-title {
+    display: initial;
+}
+
+.menu-list .card-large {
+    flex-basis: 100%;
+}
+
+.menu-list .card-large a > img {
+    width: 100%;
+    height: 90%;
+
+    display: block;
+    margin: 0 auto;
+
+    margin-top: -80px;
+}
+.menu-list .card-large .menu-title .menu-text > strong {
+    display: flex;
+    gap: 2rem;
+}
+
+/* e-menu */
+
+/* RWD */
+
+@media screen and (max-width: 1440px) {
+    .visual .visual-text {
+        left: 10vw;
+    }
+
+    .info .info-text {
+        padding: 0;
+        text-align: center;
+    }
+
+    .info .info-text p {
+        padding: 0 12.2rem;
+
+        font-size: max(2.2222vw, 2.4rem);
+    }
+
+    .info .info-text p + p {
+        font-size: max(1.6667vw, 1.6rem);
+
+        margin-top: 1.5rem;
+    }
+
+    .info .info-text .info-pic {
+        margin-top: 6.9444vw;
+    }
+}
+
+/* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
+/*          추가분기 1          */
+/* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
+
+@media screen and (max-width: 1100px) {
+    #main .visual {
+        margin-top: 6rem;
+    }
+}
+
+/* 태블릿분기 */
+@media screen and (max-width: 820px) {
+    .visual .visual-text {
+        left: 5rem;
+    }
+
+    .info .info-text p {
+        font-size: 2.4rem;
+    }
+
+    .info .info-text p + p {
+        font-size: 1.6rem;
+    }
+
+    .info h4 {
+        font-size: 3.6rem;
+    }
+
+    .info .info-text .info-pic {
+        margin-top: 5rem;
+    }
+
+    .info .info-text .info-pic li {
+        width: 17rem;
+        height: 17rem;
+    }
+
+    h3 {
+        font-size: 4.8rem;
+        padding: 2rem;
+    }
+
+    .menu-list li {
+        width: 36rem;
+        height: 45rem;
+    }
+
+    .menu-list li a > img {
+        width: 100%;
+        height: 80%;
+        margin-top: -20px;
+    }
+
+    .menu-list .badge-new {
+        width: 57px;
+        height: 57px;
+    }
+
+    .menu-list li .menu-title {
+        bottom: 30px;
+        left: 30px;
+
+        width: 30rem;
+    }
+
+    .menu-list li .menu-title strong {
+        font-size: 2rem;
+    }
+
+    .menu-list li .menu-title p {
+        font-size: 1.6rem;
+        line-height: 1;
+    }
+
+    .menu-list li .menu-badge strong {
+        display: flex;
+        width: 1.6rem;
+        height: 2.2rem;
+    }
+
+    .menu-list li .menu-info {
+        padding: 4rem;
+    }
+
+    .menu-list li .menu-info::after {
+        margin-top: 4rem;
+    }
+
+    .menu-list li .menu-info strong {
+        font-size: 2.4rem;
+    }
+
+    .menu-list li .menu-info p {
+        font-size: 1.8rem;
+    }
+
+    .pasta-rice-list .card-large {
+        flex-basis: 100%;
+    }
+
+    .steak-list .card-large {
+        flex: 1 1 calc((100% - 2rem) / 2);
+    }
+
+    .steak-list .card-large a > img {
+        height: 80%;
+        margin-top: -20px;
+    }
+}
+
+/* 모바일분기 */
+@media screen and (max-width: 430px) {
+    #main .visual {
+        margin-top: 5rem;
+    }
+
+    .visual .visual-text br + br {
+        display: initial;
+    }
+
+    .info h4 {
+        font-size: 3.2rem;
+        padding: 1rem;
+    }
+
+    .info .info-text p {
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .info .info-text .info-pic {
+        flex-wrap: wrap;
+        gap: 1.8rem;
+        justify-content: initial;
+
+        margin-top: 4rem;
+    }
+
+    .info .info-text .info-pic li {
+        flex: 1 1 calc((100% - 1.8rem) / 2);
+    }
+
+    h3 {
+        font-size: 4rem;
+        padding: 1rem;
+    }
+
+    .menu-list {
+        gap: 3.2rem;
+        margin-top: 3.2rem;
+    }
+
+    .menu-list li {
+        flex-basis: 100%;
+        height: 42.5rem;
+    }
+
+    .menu-list li a > img {
+        height: 90%;
+    }
+
+    .menu-list .badge-new {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-list li .menu-title {
+        width: calc(100% - 60px);
+    }
+
+    .menu-list .card-large a > img {
+        height: 90%;
+        margin-top: -20px;
+    }
+
+    .menu-list .card-large .menu-title .menu-text span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
