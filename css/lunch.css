@@ -11,7 +11,7 @@
 }
 
 .visual::before {
-    content: '';
+    content: "";
 
     position: absolute;
     top: 0;
@@ -126,7 +126,8 @@ h3 {
 
 .menu-list li {
     flex: 1 1 calc((100% - 4rem) / 3);
-    height: 52rem;
+    aspect-ratio: 1/1.1135;
+
     overflow: hidden;
     border: 1px solid rgba(137, 118, 93, 0.3);
 
@@ -135,8 +136,8 @@ h3 {
 
 .menu-list li a > img {
     width: 100%;
-    height: 100%;
-    margin-top: -80px;
+    height: 90%;
+    margin-top: -70px;
     object-fit: cover;
 }
 
@@ -214,7 +215,7 @@ h3 {
     opacity: 1;
 }
 .menu-list li .menu-info::after {
-    content: '';
+    content: "";
 
     display: flex;
     width: 50px;
@@ -254,16 +255,15 @@ h3 {
 
 .menu-list .card-large {
     flex-basis: 100%;
+    height: 52rem;
 }
 
 .menu-list .card-large a > img {
-    width: 100%;
-    height: 90%;
+    width: 80%;
+    height: 100%;
 
-    display: block;
-    margin: 0 auto;
-
-    margin-top: -80px;
+    display: flex;
+    margin: -80px auto 0;
 }
 .menu-list .card-large .menu-title .menu-text > strong {
     display: flex;
@@ -299,12 +299,44 @@ h3 {
     .info .info-text .info-pic {
         margin-top: 6.9444vw;
     }
+
+    .menu-list li .menu-title {
+        bottom: 30px;
+        left: 30px;
+
+        width: calc(100% - 60px);
+        border: 1px solid #000;
+    }
+
+    .menu-list li .menu-title strong {
+        font-size: max(2rem, 1.6667vw);
+    }
 }
 
 /* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
 /*          추가분기 1          */
 /* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
+@media screen and (max-width: 1200px) {
+    .menu-list li {
+        flex-basis: calc((100% - 2.1rem) / 2);
+        height: 45rem;
+    }
 
+    .menu-list li a > img {
+        width: 100%;
+        height: 80%;
+        margin-top: -20px;
+    }
+
+    .menu-list .badge-new {
+        width: 57px;
+        height: 57px;
+    }
+}
+
+/* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
+/*          추가분기 2          */
+/* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
 @media screen and (max-width: 1100px) {
     #main .visual {
         margin-top: 6rem;
@@ -341,22 +373,6 @@ h3 {
     h3 {
         font-size: 4.8rem;
         padding: 2rem;
-    }
-
-    .menu-list li {
-        width: 36rem;
-        height: 45rem;
-    }
-
-    .menu-list li a > img {
-        width: 100%;
-        height: 80%;
-        margin-top: -20px;
-    }
-
-    .menu-list .badge-new {
-        width: 57px;
-        height: 57px;
     }
 
     .menu-list li .menu-title {
@@ -397,15 +413,12 @@ h3 {
         font-size: 1.8rem;
     }
 
-    .pasta-rice-list .card-large {
-        flex-basis: 100%;
-    }
-
     .steak-list .card-large {
         flex: 1 1 calc((100% - 2rem) / 2);
     }
 
     .steak-list .card-large a > img {
+        width: 100%;
         height: 80%;
         margin-top: -20px;
     }

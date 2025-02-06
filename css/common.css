@@ -107,10 +107,6 @@ h3 {
     color: var(--title-color);
 }
 
-/* img {
-    max-width: 100%;
-} */
-
 button {
     background-color: transparent;
     cursor: pointer;

@@ -1,26 +1,22 @@
-const promotionSlider = new Swiper('.promotion-slider', {
+const promotionSlider = new Swiper(".promotion-slider", {
     loop: true,
     autoplay: true,
     speed: 1000,
 
     // If we need pagination
     pagination: {
-<<<<<<< HEAD:js/script.js
-        el: '.swiper-pagination',
-=======
         el: ".promotion-slider-wrap .swiper-pagination",
->>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f:js/main.js
         clickable: true,
     },
 
     // Navigation arrows
     navigation: {
-        nextEl: '.btn-next',
-        prevEl: '.btn-prev',
+        nextEl: ".btn-next",
+        prevEl: ".btn-prev",
     },
 });
 
-const lunchSetSlider = new Swiper('.lunch-set-slider', {
+const lunchSetSlider = new Swiper(".lunch-set-slider", {
     // Optional parameters
     loop: true,
     // slidesPerView: "auto" /* wrapper 가로길이 / 내가 설정한 slide길이 갯수만큼 보임 */,
@@ -32,9 +28,6 @@ const lunchSetSlider = new Swiper('.lunch-set-slider', {
 
     // 반응형 분기점
     breakpoints: {
-<<<<<<< HEAD:js/script.js
-        820: {
-=======
         650: {
             slidesPerView: 2,
             spaceBetween: 20,
@@ -46,7 +39,6 @@ const lunchSetSlider = new Swiper('.lunch-set-slider', {
         },
 
         1440: {
->>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f:js/main.js
             slidesPerView: 4,
             spaceBetween: 40,
         },
@@ -54,11 +46,11 @@ const lunchSetSlider = new Swiper('.lunch-set-slider', {
 
     // Navigation arrows
     navigation: {
-        nextEl: '.btn-next',
+        nextEl: ".btn-next",
     },
 });
 
-const followSlider = new Swiper('.follow-slider', {
+const followSlider = new Swiper(".follow-slider", {
     // Optional parameters
     loop: true,
     slidesPerView: 1.7,
@@ -85,11 +77,7 @@ const followSlider = new Swiper('.follow-slider', {
 
     // If we need pagination
     pagination: {
-<<<<<<< HEAD:js/script.js
-        el: '.swiper-pagination',
-=======
         el: ".follow-slider-wrap .swiper-pagination",
->>>>>>> 450bf9f8aee2a9531d454df88ec393f88e769a7f:js/main.js
         dynamicBullets: true,
         dynamicMainBullets: 1,
     },
