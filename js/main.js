@@ -28,11 +28,6 @@ const lunchSetSlider = new Swiper(".lunch-set-slider", {
 
     // 반응형 분기점
     breakpoints: {
-        650: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-
         820: {
             slidesPerView: 3,
             spaceBetween: 30,

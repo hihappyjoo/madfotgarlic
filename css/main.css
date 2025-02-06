@@ -1110,7 +1110,8 @@
     }
 
     .lunch-set-slider-wrap .lunch-set-slider {
-        width: 100%;
+        /* width: 100%; */
+        width: 710px;
         /* (345*2)+20 */
     }
 
@@ -1267,6 +1268,11 @@
 
     .promotion-slider .swiper-pagination {
         gap: 1.5rem;
+    }
+
+    .lunch-set-slider-wrap .lunch-set-slider {
+        width: 620px;
+        /* (345*2)+20 */
     }
 
     .membership-left a i {
