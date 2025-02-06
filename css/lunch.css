@@ -305,7 +305,6 @@ h3 {
         left: 30px;
 
         width: calc(100% - 60px);
-        border: 1px solid #000;
     }
 
     .menu-list li .menu-title strong {
@@ -332,6 +331,17 @@ h3 {
         width: 57px;
         height: 57px;
     }
+
+    .steak-list .card-large {
+        flex: 1 1 calc((100% - 2rem) / 2);
+        height: 45rem;
+    }
+
+    .steak-list .card-large a > img {
+        width: 100%;
+        height: 80%;
+        margin-top: -20px;
+    }
 }
 
 /* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
@@ -350,7 +360,8 @@ h3 {
     }
 
     .info .info-text p {
-        font-size: 2.4rem;
+        padding: 0 14.878vw;
+        font-size: max(2.2rem, 2.9268vw);
     }
 
     .info .info-text p + p {
@@ -367,7 +378,7 @@ h3 {
 
     .info .info-text .info-pic li {
         width: 17rem;
-        height: 17rem;
+        border-radius: 25px;
     }
 
     h3 {
@@ -375,11 +386,15 @@ h3 {
         padding: 2rem;
     }
 
+    .menu-list li,
+    .menu-list .card-large,
+    .steak-list .card-large {
+        height: 54.878vw;
+    }
+
     .menu-list li .menu-title {
         bottom: 30px;
         left: 30px;
-
-        width: 30rem;
     }
 
     .menu-list li .menu-title strong {
@@ -412,28 +427,11 @@ h3 {
     .menu-list li .menu-info p {
         font-size: 1.8rem;
     }
-
-    .steak-list .card-large {
-        flex: 1 1 calc((100% - 2rem) / 2);
-    }
-
-    .steak-list .card-large a > img {
-        width: 100%;
-        height: 80%;
-        margin-top: -20px;
-    }
 }
-
-/* 모바일분기 */
-@media screen and (max-width: 430px) {
-    #main .visual {
-        margin-top: 5rem;
-    }
-
-    .visual .visual-text br + br {
-        display: initial;
-    }
-
+/* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
+/*          추가분기 3          */
+/* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
+@media screen and (max-width: 650px) {
     .info h4 {
         font-size: 3.2rem;
         padding: 1rem;
@@ -441,9 +439,14 @@ h3 {
 
     .info .info-text p {
         padding: 0;
-        font-size: 2rem;
+        font-size: max(1.9rem, 3.3846vw);
     }
+}
 
+/* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
+/*          추가분기 4          */
+/* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
+@media screen and (max-width: 580px) {
     .info .info-text .info-pic {
         flex-wrap: wrap;
         gap: 1.8rem;
@@ -456,17 +459,13 @@ h3 {
         flex: 1 1 calc((100% - 1.8rem) / 2);
     }
 
-    h3 {
-        font-size: 4rem;
-        padding: 1rem;
-    }
-
     .menu-list {
         gap: 3.2rem;
         margin-top: 3.2rem;
     }
-
-    .menu-list li {
+    .menu-list li,
+    .menu-list .card-large,
+    .steak-list .card-large {
         flex-basis: 100%;
         height: 42.5rem;
     }
@@ -485,6 +484,7 @@ h3 {
     }
 
     .menu-list .card-large a > img {
+        width: 100%;
         height: 90%;
         margin-top: -20px;
     }
@@ -493,5 +493,21 @@ h3 {
         position: absolute;
         bottom: 0;
         right: 0;
+    }
+}
+
+/* 모바일분기 */
+@media screen and (max-width: 430px) {
+    #main .visual {
+        margin-top: 5rem;
+    }
+
+    .visual .visual-text br + br {
+        display: initial;
+    }
+
+    h3 {
+        font-size: 4rem;
+        padding: 1rem;
     }
 }
