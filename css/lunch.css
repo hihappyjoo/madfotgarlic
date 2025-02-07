@@ -219,7 +219,7 @@ h3 {
 
     display: flex;
     width: 50px;
-    height: 50px;
+    aspect-ratio: 1;
 
     background: url(../img/icon-plus.svg) no-repeat 50%;
 
@@ -307,8 +307,20 @@ h3 {
         width: calc(100% - 60px);
     }
 
-    .menu-list li .menu-title strong {
-        font-size: max(2rem, 1.6667vw);
+    .menu-list li .menu-info {
+        padding: 8rem 6.9444vw;
+    }
+
+    .menu-list li .menu-info::after {
+        margin-top: max(4rem, 4.1667vw);
+    }
+
+    .menu-list li .menu-info strong {
+        font-size: max(2.4rem, 2.2222vw);
+    }
+
+    .menu-list li .menu-info p {
+        font-size: max(1.8rem, 1.3889vw);
     }
 }
 
@@ -410,10 +422,6 @@ h3 {
         display: flex;
         width: 1.6rem;
         height: 2.2rem;
-    }
-
-    .menu-list li .menu-info {
-        padding: 4rem;
     }
 
     .menu-list li .menu-info::after {
