@@ -429,13 +429,19 @@ h3 {
     }
 
     .menu-list li .menu-info strong {
-        font-size: 2.4rem;
+        font-size: max(1.8rem, 2.9268vw);
     }
 
     .menu-list li .menu-info p {
-        font-size: 1.8rem;
+        font-size: max(1.6rem, 2.1951vw);
+    }
+
+    .menu-list li .menu-info::after {
+        width: 6vw;
+        margin-top: 4vw;
     }
 }
+
 /* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
 /*          추가분기 3          */
 /* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
@@ -501,6 +507,19 @@ h3 {
         position: absolute;
         bottom: 0;
         right: 0;
+    }
+
+    .menu-list li .menu-info strong {
+        font-size: 2.6rem;
+    }
+
+    .menu-list li .menu-info p {
+        font-size: 2rem;
+    }
+
+    .menu-list li .menu-info::after {
+        width: 50px;
+        margin-top: 4rem;
     }
 }
 

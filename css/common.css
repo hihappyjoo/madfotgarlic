@@ -112,6 +112,10 @@ button {
     cursor: pointer;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font: 1.6rem/1.6 "Pretendard", sans-serif;
     word-break: keep-all;
