@@ -172,6 +172,10 @@
 
 /* //e-main-steak set */
 
+.lunch-set {
+    overflow-x: hidden;
+}
+
 .lunch-con {
     display: flex;
     gap: 12.2rem;

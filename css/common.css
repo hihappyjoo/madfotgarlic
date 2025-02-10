@@ -112,15 +112,15 @@ button {
     cursor: pointer;
 }
 
-html {
+/* html {
     overflow-x: hidden;
-}
+} */
 
 body {
     font: 1.6rem/1.6 "Pretendard", sans-serif;
     word-break: keep-all;
     color: var(--text-color);
-    overflow-x: hidden; /* 넘어가는게 있어도 가로스크롤이 안생기는 명령어 */
+    /* overflow-x: hidden; 넘어가는게 있어도 가로스크롤이 안생기는 명령어 */
     position: relative;
 }
 
@@ -182,6 +182,10 @@ body {
 nav .sub-menu-swiper .swiper-slide {
     display: flex;
     flex-shrink: 1;
+}
+
+nav .sub-menu-swiper .swiper-slide.active {
+    border-bottom: 3px solid #000;
 }
 
 nav .sub-menu-swiper .swiper-slide a {
