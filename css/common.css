@@ -157,13 +157,65 @@ body {
     display: flex;
 }
 
-.gnb a {
+.gnb > li > a {
     display: block;
-    padding: 1rem 4rem;
+    padding: 2.8rem 4rem;
 
     font-weight: 600;
     font-size: 2rem;
 }
+
+.gnb li {
+    position: relative;
+}
+
+.gnb-sub {
+    position: absolute;
+    top: 100%;
+    left: 2rem;
+
+    /* width: 200px; */
+
+    padding: 15px 0;
+    background: var(--black80p);
+    backdrop-filter: blur(4px);
+    border-top: 1px solid var(--white50p);
+
+    display: none;
+}
+
+.gnb-sub a {
+    display: block;
+    padding: 10px 20px;
+
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.gnb-sub li a b {
+    position: relative;
+}
+
+.gnb-sub li a b::after {
+    content: "";
+
+    position: absolute;
+    top: 150%;
+    left: 0;
+
+    display: block;
+    width: 0;
+    height: 1px;
+
+    background: #fff;
+
+    transition: 0.4s;
+}
+
+.gnb-sub li:hover a b::after {
+    width: 100%;
+}
+
 /* //e-header */
 
 #main section {

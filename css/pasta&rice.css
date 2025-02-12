@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.pasta-list .card-large {
+    flex: 1 1 calc((100% - 2rem) / 2);
+    height: 47rem;
+}
+
+.pasta-list .card-large a > img {
+    width: 85%;
+}
+
+@media screen and (max-width: 1200px) {
+    .pasta-list .card-large {
+        height: 45rem;
+    }
+
+    .pasta-list .card-large a > img {
+        width: 100%;
+        height: 80%;
+        margin-top: -20px;
+    }
+
+    .rice-list li:last-child a > img {
+        height: 100%;
+        margin-top: -80px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .pasta-list .card-large {
+        height: 54.878vw;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .pasta-list .card-large {
+        height: 42.5rem;
+    }
+
+    .rice-list li:last-child a > img {
+        height: 90%;
+        margin-top: -20px;
+    }
+}

@@ -234,23 +234,9 @@ h3 {
 .menu-list li .menu-info p {
     font-size: 2rem;
 }
+
 .menu-list li .menu-info p + p {
     margin-top: 2rem;
-}
-
-/* e-menu for all */
-
-.salad-list li {
-    width: 71rem;
-    height: 52rem;
-    overflow: hidden;
-    border: 1px solid rgba(137, 118, 93, 0.3);
-
-    position: relative;
-}
-
-.salad-list li .menu-title {
-    display: initial;
 }
 
 .menu-list .card-large {
@@ -343,17 +329,6 @@ h3 {
         width: 57px;
         height: 57px;
     }
-
-    .steak-list .card-large {
-        flex: 1 1 calc((100% - 2rem) / 2);
-        height: 45rem;
-    }
-
-    .steak-list .card-large a > img {
-        width: 100%;
-        height: 80%;
-        margin-top: -20px;
-    }
 }
 
 /* ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ */
@@ -398,9 +373,7 @@ h3 {
         padding: 2rem;
     }
 
-    .menu-list li,
-    .menu-list .card-large,
-    .steak-list .card-large {
+    .menu-list li {
         height: 54.878vw;
     }
 
@@ -478,8 +451,7 @@ h3 {
         margin-top: 3.2rem;
     }
     .menu-list li,
-    .menu-list .card-large,
-    .steak-list .card-large {
+    .menu-list .card-large {
         flex-basis: 100%;
         height: 42.5rem;
     }

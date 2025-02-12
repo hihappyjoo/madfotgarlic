@@ -8,11 +8,6 @@
         <link rel="apple-touch-icon" href="/img/favicon.png" />
         <title>매드포갈릭</title>
 
-        <!-- swiper.js -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <!-- swiper.js -->
-
         <!-- remixicon -->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
         <!-- remixicon -->
@@ -20,6 +15,14 @@
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
         <link rel="stylesheet" href="./css/main.css" />
+
+        <!-- swiper.js -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- swiper.js -->
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/main.js"></script>
     </head>
 
     <body>
@@ -28,14 +31,100 @@
         <header id="header">
             <nav>
                 <h1 class="logo">
-                    <a href="#"><img src="./img/logo-white.png" alt="매드 포 갈릭" /></a>
+                    <a href="./index.html"><img src="./img/logo-white.png" alt="매드 포 갈릭" /></a>
                 </h1>
                 <ul class="gnb">
-                    <li><a href="#">매드포갈릭</a></li>
-                    <li><a href="#">메뉴</a></li>
-                    <li><a href="#">매장</a></li>
-                    <li><a href="#">멤버십</a></li>
-                    <li><a href="#">커뮤니티</a></li>
+                    <li>
+                        <a href="#">매드포갈릭</a>
+                        <ul class="gnb-sub">
+                            <li>
+                                <a href="#"><b>MAD FOR GARLIC</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>마늘이야기</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>모바일앱 소개</b></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴</a>
+                        <ul class="gnb-sub">
+                            <li>
+                                <a href="#"><b>에피타이저 & 샐러드</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>파스타 & 라이스</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>피자</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>스테이크</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>시그니처 스테이크 세트</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>런치 세트</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>음료 & 디저트</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>와인</b></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">매장</a>
+                        <ul class="gnb-sub">
+                            <li>
+                                <a href="#"><b>매장찾기</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>예약하기</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>대관안내</b></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">멤버십</a>
+                        <ul class="gnb-sub">
+                            <li>
+                                <a href="#"><b>M CLUB</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>멤버십 혜택</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>가입하기</b></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="gnb-sub">
+                            <li>
+                                <a href="#"><b>이벤트</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>공지사항</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>제휴 & 상품권</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>문의사항</b></a>
+                            </li>
+                            <li>
+                                <a href="#"><b>채용안내</b></a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
                 <button type="button" class="btn btn-login">로그인</button>
                 <button type="button" class="btn btn-menu"><i class="hidden">메뉴</i></button>
@@ -132,7 +221,7 @@
                                     <i>매드 런치 세트</i>
                                 </p>
                             </div>
-                            <a class="view-more" href="./lunch.html">자세히 보기</a>
+                            <a class="view-more" href="./menu-lunch.html">자세히 보기</a>
                         </div>
                         <div class="lunch-set-slider-wrap">
                             <div class="swiper lunch-set-slider">
@@ -482,7 +571,5 @@
                 <p>COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</p>
             </address>
         </footer>
-
-        <script src="./js/main.js"></script>
     </body>
 </html>
