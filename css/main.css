@@ -607,6 +607,7 @@
 
 /* swiper 질문 이거 양옆에 auto때문인지 보였다안보였다 하는데 보이게하고시퓨어요 */
 /* 투명도 지금은 op로 개체마다 바꿨는데 그라데이션으로 하고 싶어요 이거는 posa해서 포토샵 마스크처럼 흰색그라데이션 넣으면될까요??? */
+
 .follow-slider-wrap {
     margin-top: 8rem;
     position: relative;
@@ -652,7 +653,7 @@
 }
 
 .follow-slider .swiper-slide-active {
-    transform: scale(1);
+    transform: scale(1) !important;
 }
 
 .follow-slider-wrap a img {

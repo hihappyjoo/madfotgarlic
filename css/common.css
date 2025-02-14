@@ -227,7 +227,6 @@ body {
 }
 
 nav .sub-menu-swiper .swiper-slide {
-    display: flex;
     flex-shrink: 1;
 }
 
